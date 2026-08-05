@@ -14,10 +14,11 @@
 
     <link
         rel="stylesheet"
-        href="../../css/dashboard.css"
+        href="dashboard.css"
     >
 
 </head>
+
 
 <body>
 
@@ -30,15 +31,13 @@
 
     <aside class="sidebar">
 
-        <!-- BRAND -->
-
         <div class="sidebar-brand">
 
             <div class="sidebar-logo">
                 +
             </div>
 
-            <div class="brand-text">
+            <div>
                 <strong>CENDEKIA</strong>
                 <span>MEDIKA</span>
             </div>
@@ -46,10 +45,7 @@
         </div>
 
 
-        <!-- NAVIGATION -->
-
         <nav class="sidebar-nav">
-
 
             <!-- MAIN MENU -->
 
@@ -62,41 +58,26 @@
                 href="dashboard.html"
                 class="nav-item active"
             >
-
                 <span class="nav-icon">▦</span>
-
-                <span class="nav-text">
-                    Dashboard
-                </span>
-
+                <span>Dashboard</span>
             </a>
 
 
             <a
-                href="#"
+                href="patients.html"
                 class="nav-item"
             >
-
                 <span class="nav-icon">♙</span>
-
-                <span class="nav-text">
-                    Patients
-                </span>
-
+                <span>Patients</span>
             </a>
 
 
             <a
-                href="#"
+                href="appointments.html"
                 class="nav-item"
             >
-
                 <span class="nav-icon">◷</span>
-
-                <span class="nav-text">
-                    Appointments
-                </span>
-
+                <span>Appointments</span>
             </a>
 
 
@@ -109,44 +90,29 @@
 
 
             <a
-                href="#"
+                href="staff.html"
                 class="nav-item"
             >
-
                 <span class="nav-icon">♙</span>
-
-                <span class="nav-text">
-                    Staff
-                </span>
-
+                <span>Staff</span>
             </a>
 
 
             <a
-                href="#"
+                href="departments.html"
                 class="nav-item"
             >
-
                 <span class="nav-icon">▤</span>
-
-                <span class="nav-text">
-                    Departments
-                </span>
-
+                <span>Departments</span>
             </a>
 
 
             <a
-                href="#"
+                href="rooms.html"
                 class="nav-item"
             >
-
                 <span class="nav-icon">▤</span>
-
-                <span class="nav-text">
-                    Rooms & Beds
-                </span>
-
+                <span>Rooms &amp; Beds</span>
             </a>
 
 
@@ -159,61 +125,42 @@
 
 
             <a
-                href="#"
+                href="users.html"
                 class="nav-item"
             >
-
                 <span class="nav-icon">♙</span>
-
-                <span class="nav-text">
-                    User Management
-                </span>
-
+                <span>User Management</span>
             </a>
 
 
             <a
-                href="#"
+                href="reports.html"
                 class="nav-item"
             >
-
                 <span class="nav-icon">▤</span>
-
-                <span class="nav-text">
-                    Reports
-                </span>
-
+                <span>Reports</span>
             </a>
 
 
             <a
-                href="#"
+                href="audit-logs.html"
                 class="nav-item"
             >
-
                 <span class="nav-icon">◉</span>
-
-                <span class="nav-text">
-                    Audit Logs
-                </span>
-
+                <span>Audit Logs</span>
             </a>
 
 
             <a
-                href="#"
+                href="settings.html"
                 class="nav-item"
             >
-
                 <span class="nav-icon">⚙</span>
-
-                <span class="nav-text">
-                    Settings
-                </span>
-
+                <span>Settings</span>
             </a>
 
         </nav>
+
 
 
         <!-- SIDEBAR BOTTOM -->
@@ -222,17 +169,13 @@
 
             <button
                 class="logout-button"
-                id="logoutButton"
                 type="button"
+                onclick="logout()"
             >
 
-                <span class="logout-icon">
-                    ↪
-                </span>
+                <span>↪</span>
 
-                <span>
-                    Sign out
-                </span>
+                Sign out
 
             </button>
 
@@ -260,15 +203,10 @@
 
             <div class="topbar-right">
 
-
-                <!-- NOTIFICATION -->
-
                 <button
                     class="notification-button"
                     type="button"
-                    aria-label="Notifications"
                 >
-
                     ♧
 
                     <span class="notification-dot"></span>
@@ -276,12 +214,7 @@
                 </button>
 
 
-                <!-- PROFILE -->
-
-                <button
-                    class="profile"
-                    type="button"
-                >
+                <div class="profile">
 
                     <div class="profile-avatar">
                         A
@@ -305,7 +238,7 @@
                         ▾
                     </span>
 
-                </button>
+                </div>
 
             </div>
 
@@ -320,7 +253,7 @@
         <section class="dashboard-content">
 
 
-            <!-- PAGE HEADING -->
+            <!-- PAGE HEADER -->
 
             <div class="page-heading">
 
@@ -330,36 +263,37 @@
                         ADMINISTRATION
                     </p>
 
+
                     <h1>
                         Good morning, Admin
                     </h1>
 
+
                     <p>
-                        Here's what's happening at
-                        Cendekia Medika today.
+                        Here's an overview of Cendekia Medika today.
                     </p>
 
                 </div>
 
 
-                <button
-                    class="primary-button"
-                    id="quickAddButton"
-                    type="button"
-                >
+                <div class="dashboard-date">
 
-                    <span>+</span>
+                    <span>
+                        TODAY
+                    </span>
 
-                    Add Patient
+                    <strong id="currentDate">
+                        August 6, 2026
+                    </strong>
 
-                </button>
+                </div>
 
             </div>
 
 
 
             <!-- =====================================
-                 STATISTICS
+                 HOSPITAL OVERVIEW
             ====================================== -->
 
             <div class="stats-grid">
@@ -367,11 +301,12 @@
 
                 <!-- PATIENTS -->
 
-                <article class="stat-card">
+                <div class="stat-card">
 
                     <div class="stat-icon patient">
                         ♙
                     </div>
+
 
                     <div class="stat-info">
 
@@ -389,16 +324,76 @@
 
                     </div>
 
-                </article>
+                </div>
+
+
+
+                <!-- DOCTORS -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon doctor">
+                        ⚕
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Doctors
+                        </span>
+
+                        <strong>
+                            42
+                        </strong>
+
+                        <small>
+                            3 new this month
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- NURSES -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon nurse">
+                        ✚
+                    </div>
+
+
+                    <div class="stat-info">
+
+                        <span>
+                            Nurses
+                        </span>
+
+                        <strong>
+                            86
+                        </strong>
+
+                        <small>
+                            4 new this month
+                        </small>
+
+                    </div>
+
+                </div>
+
 
 
                 <!-- APPOINTMENTS -->
 
-                <article class="stat-card">
+                <div class="stat-card">
 
                     <div class="stat-icon appointment">
                         ◷
                     </div>
+
 
                     <div class="stat-info">
 
@@ -411,277 +406,51 @@
                         </strong>
 
                         <small>
-                            24 remaining
+                            24 pending
                         </small>
 
                     </div>
 
-                </article>
+                </div>
 
-
-                <!-- STAFF -->
-
-                <article class="stat-card">
-
-                    <div class="stat-icon staff">
-                        ♙
-                    </div>
-
-                    <div class="stat-info">
-
-                        <span>
-                            Medical Staff
-                        </span>
-
-                        <strong>
-                            128
-                        </strong>
-
-                        <small>
-                            42 doctors · 86 nurses
-                        </small>
-
-                    </div>
-
-                </article>
 
 
                 <!-- BEDS -->
 
-                <article class="stat-card">
+                <div class="stat-card">
 
-                    <div class="stat-icon beds">
-                        ▤
+                    <div class="stat-icon bed">
+                        ▣
                     </div>
+
 
                     <div class="stat-info">
 
                         <span>
-                            Available Beds
+                            Occupied Beds
                         </span>
 
                         <strong>
-                            37
+                            78 / 120
                         </strong>
 
                         <small>
-                            of 210 total beds
+                            65% occupancy
                         </small>
 
                     </div>
 
-                </article>
+                </div>
 
             </div>
 
 
 
             <!-- =====================================
-                 DASHBOARD GRID
+                 MAIN DASHBOARD GRID
             ====================================== -->
 
             <div class="dashboard-grid">
-
-
-                <!-- =================================
-                     RECENT PATIENTS
-                ================================== -->
-
-                <section class="dashboard-card patients-card">
-
-
-                    <div class="card-header">
-
-                        <div>
-
-                            <h2>
-                                Recent Patients
-                            </h2>
-
-                            <p>
-                                Recently registered patients
-                            </p>
-
-                        </div>
-
-
-                        <button
-                            class="text-button"
-                            type="button"
-                        >
-                            View all
-                        </button>
-
-                    </div>
-
-
-                    <div class="table-container">
-
-                        <table>
-
-                            <thead>
-
-                                <tr>
-
-                                    <th>
-                                        PATIENT
-                                    </th>
-
-                                    <th>
-                                        ID
-                                    </th>
-
-                                    <th>
-                                        DEPARTMENT
-                                    </th>
-
-                                    <th>
-                                        STATUS
-                                    </th>
-
-                                </tr>
-
-                            </thead>
-
-
-                            <tbody>
-
-                                <tr>
-
-                                    <td>
-
-                                        <div class="person-cell">
-
-                                            <div class="person-avatar">
-                                                AS
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Amanda Sari
-                                                </strong>
-
-                                                <span>
-                                                    Female · 28
-                                                </span>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-                                    <td>
-                                        PT-001248
-                                    </td>
-
-                                    <td>
-                                        Internal Medicine
-                                    </td>
-
-                                    <td>
-                                        <span class="status active">
-                                            Active
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>
-
-                                        <div class="person-cell">
-
-                                            <div class="person-avatar">
-                                                RM
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Rizky Maulana
-                                                </strong>
-
-                                                <span>
-                                                    Male · 35
-                                                </span>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-                                    <td>
-                                        PT-001247
-                                    </td>
-
-                                    <td>
-                                        Cardiology
-                                    </td>
-
-                                    <td>
-                                        <span class="status active">
-                                            Active
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-
-                                <tr>
-
-                                    <td>
-
-                                        <div class="person-cell">
-
-                                            <div class="person-avatar">
-                                                DN
-                                            </div>
-
-                                            <div>
-
-                                                <strong>
-                                                    Dinda Nuraini
-                                                </strong>
-
-                                                <span>
-                                                    Female · 41
-                                                </span>
-
-                                            </div>
-
-                                        </div>
-
-                                    </td>
-
-                                    <td>
-                                        PT-001246
-                                    </td>
-
-                                    <td>
-                                        Neurology
-                                    </td>
-
-                                    <td>
-                                        <span class="status pending">
-                                            Pending
-                                        </span>
-                                    </td>
-
-                                </tr>
-
-                            </tbody>
-
-                        </table>
-
-                    </div>
-
-                </section>
-
 
 
                 <!-- =================================
@@ -700,174 +469,293 @@
                             </h2>
 
                             <p>
-                                Upcoming appointments
+                                Scheduled appointments for today.
                             </p>
 
                         </div>
 
 
-                        <button
-                            class="text-button"
-                            type="button"
-                        >
-                            View all
-                        </button>
+                        <a href="appointments.html">
+                            View all →
+                        </a>
 
                     </div>
 
 
-                    <div class="appointment-list">
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        TIME
+                                    </th>
+
+                                    <th>
+                                        PATIENT
+                                    </th>
+
+                                    <th>
+                                        DOCTOR
+                                    </th>
+
+                                    <th>
+                                        DEPARTMENT
+                                    </th>
+
+                                    <th>
+                                        STATUS
+                                    </th>
+
+                                </tr>
+
+                            </thead>
 
 
-                        <div class="appointment-item">
-
-                            <div class="appointment-time">
-                                <strong>
-                                    09:00
-                                </strong>
-
-                                <span>
-                                    AM
-                                </span>
-                            </div>
+                            <tbody>
 
 
-                            <div class="appointment-info">
+                                <tr>
 
-                                <strong>
-                                    Amanda Sari
-                                </strong>
-
-                                <span>
-                                    Dr. Dimas Santoso
-                                </span>
-
-                            </div>
+                                    <td>
+                                        <strong>
+                                            08:30 AM
+                                        </strong>
+                                    </td>
 
 
-                            <span class="status confirmed">
-                                Confirmed
-                            </span>
+                                    <td>
 
-                        </div>
+                                        <div class="patient-cell">
 
+                                            <div class="table-avatar">
+                                                AS
+                                            </div>
 
-                        <div class="appointment-item">
+                                            <div>
 
-                            <div class="appointment-time">
-                                <strong>
-                                    10:30
-                                </strong>
+                                                <strong>
+                                                    Amanda Sari
+                                                </strong>
 
-                                <span>
-                                    AM
-                                </span>
-                            </div>
+                                                <span>
+                                                    PT-001248
+                                                </span>
 
+                                            </div>
 
-                            <div class="appointment-info">
+                                        </div>
 
-                                <strong>
-                                    Rizky Maulana
-                                </strong>
-
-                                <span>
-                                    Dr. Budi Hartono
-                                </span>
-
-                            </div>
+                                    </td>
 
 
-                            <span class="status confirmed">
-                                Confirmed
-                            </span>
-
-                        </div>
+                                    <td>
+                                        Dr. Dimas Santoso
+                                    </td>
 
 
-                        <div class="appointment-item">
-
-                            <div class="appointment-time">
-                                <strong>
-                                    01:00
-                                </strong>
-
-                                <span>
-                                    PM
-                                </span>
-                            </div>
+                                    <td>
+                                        Internal Medicine
+                                    </td>
 
 
-                            <div class="appointment-info">
+                                    <td>
 
-                                <strong>
-                                    Dinda Nuraini
-                                </strong>
+                                        <span class="status confirmed">
+                                            Confirmed
+                                        </span>
 
-                                <span>
-                                    Dr. Maya Putri
-                                </span>
+                                    </td>
 
-                            </div>
+                                </tr>
 
 
-                            <span class="status pending">
-                                Pending
-                            </span>
 
-                        </div>
+                                <tr>
 
-
-                        <div class="appointment-item">
-
-                            <div class="appointment-time">
-                                <strong>
-                                    02:30
-                                </strong>
-
-                                <span>
-                                    PM
-                                </span>
-                            </div>
+                                    <td>
+                                        <strong>
+                                            09:00 AM
+                                        </strong>
+                                    </td>
 
 
-                            <div class="appointment-info">
+                                    <td>
 
-                                <strong>
-                                    Fajar Nugraha
-                                </strong>
+                                        <div class="patient-cell">
 
-                                <span>
-                                    Dr. Dimas Santoso
-                                </span>
+                                            <div class="table-avatar">
+                                                RM
+                                            </div>
 
-                            </div>
+                                            <div>
+
+                                                <strong>
+                                                    Rizky Maulana
+                                                </strong>
+
+                                                <span>
+                                                    PT-001247
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
 
 
-                            <span class="status confirmed">
-                                Confirmed
-                            </span>
+                                    <td>
+                                        Dr. Maya Putri
+                                    </td>
 
-                        </div>
+
+                                    <td>
+                                        Cardiology
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status confirmed">
+                                            Confirmed
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            09:30 AM
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="patient-cell">
+
+                                            <div class="table-avatar">
+                                                DN
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Dinda Nuraini
+                                                </strong>
+
+                                                <span>
+                                                    PT-001246
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Dr. Budi Hartono
+                                    </td>
+
+
+                                    <td>
+                                        Neurology
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            10:00 AM
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="patient-cell">
+
+                                            <div class="table-avatar">
+                                                FN
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Fajar Nugraha
+                                                </strong>
+
+                                                <span>
+                                                    PT-001245
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        Dr. Dimas Santoso
+                                    </td>
+
+
+                                    <td>
+                                        Internal Medicine
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="status confirmed">
+                                            Confirmed
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
 
                     </div>
 
                 </section>
 
-            </div>
 
 
+                <!-- =================================
+                     HOSPITAL CAPACITY
+                ================================== -->
 
-            <!-- =====================================
-                 BOTTOM GRID
-            ====================================== -->
-
-            <div class="bottom-grid">
-
-
-                <!-- QUICK ACTIONS -->
-
-                <section class="dashboard-card">
+                <section class="dashboard-card capacity-card">
 
 
                     <div class="card-header">
@@ -875,119 +763,149 @@
                         <div>
 
                             <h2>
-                                Quick Actions
+                                Hospital Capacity
                             </h2>
 
                             <p>
-                                Common administrative tasks
+                                Current bed occupancy.
                             </p>
 
                         </div>
 
+
+                        <a href="rooms.html">
+                            View rooms →
+                        </a>
+
                     </div>
 
 
-                    <div class="quick-actions">
 
+                    <!-- OVERALL -->
 
-                        <button
-                            class="quick-action"
-                            type="button"
-                            data-action="patient"
-                        >
+                    <div class="capacity-overview">
 
-                            <span class="quick-icon">
-                                +
+                        <div>
+
+                            <strong>
+                                78
+                            </strong>
+
+                            <span>
+                                / 120 beds occupied
                             </span>
 
-                            <span class="quick-text">
+                        </div>
+
+
+                        <strong class="capacity-percent">
+                            65%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width: 65%;"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- CAPACITY LIST -->
+
+                    <div class="capacity-list">
+
+
+                        <div class="capacity-item">
+
+                            <div>
 
                                 <strong>
-                                    Add Patient
+                                    ICU
                                 </strong>
 
-                                <small>
-                                    Register a new patient
-                                </small>
+                                <span>
+                                    Intensive Care
+                                </span>
 
-                            </span>
+                            </div>
 
-                        </button>
+                            <strong>
+                                8 / 10
+                            </strong>
+
+                        </div>
 
 
-                        <button
-                            class="quick-action"
-                            type="button"
-                            data-action="appointment"
-                        >
 
-                            <span class="quick-icon">
-                                ◷
-                            </span>
+                        <div class="capacity-item">
 
-                            <span class="quick-text">
+                            <div>
 
                                 <strong>
-                                    Add Appointment
+                                    Inpatient
                                 </strong>
 
-                                <small>
-                                    Schedule a patient visit
-                                </small>
+                                <span>
+                                    General Ward
+                                </span>
 
-                            </span>
+                            </div>
 
-                        </button>
+                            <strong>
+                                52 / 80
+                            </strong>
+
+                        </div>
 
 
-                        <button
-                            class="quick-action"
-                            type="button"
-                            data-action="staff"
-                        >
 
-                            <span class="quick-icon">
-                                ♙
-                            </span>
+                        <div class="capacity-item">
 
-                            <span class="quick-text">
+                            <div>
 
                                 <strong>
-                                    Add Staff
+                                    Emergency
                                 </strong>
 
-                                <small>
-                                    Register medical staff
-                                </small>
+                                <span>
+                                    Emergency Unit
+                                </span>
 
-                            </span>
+                            </div>
 
-                        </button>
+                            <strong>
+                                12 / 20
+                            </strong>
+
+                        </div>
 
 
-                        <button
-                            class="quick-action"
-                            type="button"
-                            data-action="report"
-                        >
 
-                            <span class="quick-icon">
-                                ▤
-                            </span>
+                        <div class="capacity-item">
 
-                            <span class="quick-text">
+                            <div>
 
                                 <strong>
-                                    Generate Report
+                                    Isolation
                                 </strong>
 
-                                <small>
-                                    View hospital reports
-                                </small>
+                                <span>
+                                    Isolation Ward
+                                </span>
 
-                            </span>
+                            </div>
 
-                        </button>
+                            <strong>
+                                6 / 10
+                            </strong>
+
+                        </div>
 
                     </div>
 
@@ -995,9 +913,106 @@
 
 
 
-                <!-- RECENT ACTIVITY -->
+                <!-- =================================
+                     STAFF OVERVIEW
+                ================================== -->
 
-                <section class="dashboard-card">
+                <section class="dashboard-card staff-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Staff Overview
+                            </h2>
+
+                            <p>
+                                Current active hospital staff.
+                            </p>
+
+                        </div>
+
+
+                        <a href="staff.html">
+                            View staff →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="staff-total">
+
+                        <strong>
+                            128
+                        </strong>
+
+                        <span>
+                            Active Staff
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="staff-breakdown">
+
+
+                        <div class="staff-item">
+
+                            <div class="staff-icon doctor">
+                                ⚕
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    42
+                                </strong>
+
+                                <span>
+                                    Doctors
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="staff-item">
+
+                            <div class="staff-icon nurse">
+                                ✚
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    86
+                                </strong>
+
+                                <span>
+                                    Nurses
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     RECENT ACTIVITY
+                ================================== -->
+
+                <section class="dashboard-card activity-card">
 
 
                     <div class="card-header">
@@ -1009,20 +1024,18 @@
                             </h2>
 
                             <p>
-                                Latest system activity
+                                Latest system activity.
                             </p>
 
                         </div>
 
 
-                        <button
-                            class="text-button"
-                            type="button"
-                        >
-                            View logs
-                        </button>
+                        <a href="audit-logs.html">
+                            View logs →
+                        </a>
 
                     </div>
+
 
 
                     <div class="activity-list">
@@ -1037,16 +1050,47 @@
                             <div>
 
                                 <strong>
-                                    New patient registered
+                                    New doctor account created
                                 </strong>
 
                                 <span>
-                                    Amanda Sari · 8 minutes ago
+                                    Dr. Maya Putri was added to the system.
                                 </span>
+
+                                <small>
+                                    10 minutes ago
+                                </small>
 
                             </div>
 
                         </div>
+
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">
+                                ♙
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    User account updated
+                                </strong>
+
+                                <span>
+                                    Siti Amelia's account information was updated.
+                                </span>
+
+                                <small>
+                                    24 minutes ago
+                                </small>
+
+                            </div>
+
+                        </div>
+
 
 
                         <div class="activity-item">
@@ -1062,12 +1106,17 @@
                                 </strong>
 
                                 <span>
-                                    Rizky Maulana · 24 minutes ago
+                                    APT-0008 was confirmed.
                                 </span>
+
+                                <small>
+                                    32 minutes ago
+                                </small>
 
                             </div>
 
                         </div>
+
 
 
                         <div class="activity-item">
@@ -1079,17 +1128,20 @@
                             <div>
 
                                 <strong>
-                                    New staff account created
+                                    New patient registered
                                 </strong>
 
                                 <span>
-                                    Siti Amelia · 1 hour ago
+                                    Patient PT-001249 was registered.
                                 </span>
+
+                                <small>
+                                    45 minutes ago
+                                </small>
 
                             </div>
 
                         </div>
-
 
                     </div>
 
@@ -1105,7 +1157,46 @@
 
 
 
-<script src="../../js/dashboard.js"></script>
+<!-- =====================================
+     JAVASCRIPT
+====================================== -->
+
+<script>
+
+function logout() {
+
+    window.location.href =
+        "../../index.html";
+
+}
+
+
+/* =====================================
+   CURRENT DATE
+===================================== */
+
+const currentDate =
+    document.getElementById(
+        "currentDate"
+    );
+
+
+const today =
+    new Date();
+
+
+currentDate.textContent =
+    today.toLocaleDateString(
+        "en-US",
+        {
+            month: "long",
+            day: "numeric",
+            year: "numeric"
+        }
+    );
+
+</script>
+
 
 </body>
 

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | Cendekia Medika</title>
+
+    <link
+        rel="stylesheet"
+        href="css/login.css"
+    >
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <!-- LEFT BRANDING -->
+        <section class="login-brand">
+
+            <div class="brand-content">
+
+                <div class="brand-logo">
+                    +
+                </div>
+
+                <div class="brand-name">
+                    <strong>CENDEKIA</strong>
+                    <span>MEDIKA</span>
+                </div>
+
+                <div class="brand-divider"></div>
+
+                <h1>
+                    Caring through
+                    <span>better technology.</span>
+                </h1>
+
+                <p>
+                    A unified hospital information system
+                    designed to make healthcare management
+                    simpler, safer, and more connected.
+                </p>
+
+            </div>
+
+            <div class="brand-footer">
+                © 2026 Cendekia Medika
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT LOGIN -->
+        <section class="login-section">
+
+            <div class="login-container">
+
+                <div class="mobile-brand">
+
+                    <div class="mobile-logo">
+                        +
+                    </div>
+
+                    <div>
+                        <strong>CENDEKIA</strong>
+                        <span>MEDIKA</span>
+                    </div>
+
+                </div>
+
+
+                <div class="login-header">
+
+                    <p class="eyebrow">
+                        WELCOME BACK
+                    </p>
+
+                    <h2>
+                        Sign in to your account
+                    </h2>
+
+                    <p>
+                        Enter your credentials to access
+                        the hospital system.
+                    </p>
+
+                </div>
+
+
+                <!-- ERROR MESSAGE -->
+                <div
+                    class="login-error"
+                    id="loginError"
+                    role="alert"
+                >
+                    Invalid email or password.
+                </div>
+
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm">
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a
+                                href="#"
+                                class="forgot-password"
+                            >
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="passwordToggle"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="remember-me">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        <span class="checkmark"></span>
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                        id="loginButton"
+                    >
+                        <span id="loginButtonText">
+                            Sign In
+                        </span>
+
+                        <span
+                            class="button-loader"
+                            id="buttonLoader"
+                        ></span>
+
+                    </button>
+
+                </form>
+
+
+                <p class="login-help">
+                    Having trouble signing in?
+                    <a href="#">
+                        Contact system administrator
+                    </a>
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

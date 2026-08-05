@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | Cendekia Medika</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/dashboard.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app-layout">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+        <!-- BRAND -->
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-logo">
+                +
+            </div>
+
+            <div class="brand-text">
+                <strong>CENDEKIA</strong>
+                <span>MEDIKA</span>
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+
+            <!-- MAIN MENU -->
+
+            <p class="nav-label">
+                MAIN MENU
+            </p>
+
+
+            <a
+                href="dashboard.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">▦</span>
+
+                <span class="nav-text">
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">♙</span>
+
+                <span class="nav-text">
+                    Patients
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">◷</span>
+
+                <span class="nav-text">
+                    Appointments
+                </span>
+
+            </a>
+
+
+
+            <!-- HOSPITAL -->
+
+            <p class="nav-label secondary">
+                HOSPITAL
+            </p>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">♙</span>
+
+                <span class="nav-text">
+                    Staff
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">▤</span>
+
+                <span class="nav-text">
+                    Departments
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">▤</span>
+
+                <span class="nav-text">
+                    Rooms & Beds
+                </span>
+
+            </a>
+
+
+
+            <!-- ADMINISTRATION -->
+
+            <p class="nav-label secondary">
+                ADMINISTRATION
+            </p>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">♙</span>
+
+                <span class="nav-text">
+                    User Management
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">▤</span>
+
+                <span class="nav-text">
+                    Reports
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">◉</span>
+
+                <span class="nav-text">
+                    Audit Logs
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">⚙</span>
+
+                <span class="nav-text">
+                    Settings
+                </span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <button
+                class="logout-button"
+                id="logoutButton"
+                type="button"
+            >
+
+                <span class="logout-icon">
+                    ↪
+                </span>
+
+                <span>
+                    Sign out
+                </span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <!-- NOTIFICATION -->
+
+                <button
+                    class="notification-button"
+                    type="button"
+                    aria-label="Notifications"
+                >
+
+                    ♧
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <!-- PROFILE -->
+
+                <button
+                    class="profile"
+                    type="button"
+                >
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span>
+                            Administrator
+                        </span>
+
+                    </div>
+
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             DASHBOARD
+        ====================================== -->
+
+        <section class="dashboard-content">
+
+
+            <!-- PAGE HEADING -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        ADMINISTRATION
+                    </p>
+
+                    <h1>
+                        Good morning, Admin
+                    </h1>
+
+                    <p>
+                        Here's what's happening at
+                        Cendekia Medika today.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    id="quickAddButton"
+                    type="button"
+                >
+
+                    <span>+</span>
+
+                    Add Patient
+
+                </button>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 STATISTICS
+            ====================================== -->
+
+            <div class="stats-grid">
+
+
+                <!-- PATIENTS -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon patient">
+                        ♙
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Total Patients
+                        </span>
+
+                        <strong>
+                            1,248
+                        </strong>
+
+                        <small>
+                            +8.2% this month
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- APPOINTMENTS -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon appointment">
+                        ◷
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Today's Appointments
+                        </span>
+
+                        <strong>
+                            156
+                        </strong>
+
+                        <small>
+                            24 remaining
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- STAFF -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon staff">
+                        ♙
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Medical Staff
+                        </span>
+
+                        <strong>
+                            128
+                        </strong>
+
+                        <small>
+                            42 doctors · 86 nurses
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- BEDS -->
+
+                <article class="stat-card">
+
+                    <div class="stat-icon beds">
+                        ▤
+                    </div>
+
+                    <div class="stat-info">
+
+                        <span>
+                            Available Beds
+                        </span>
+
+                        <strong>
+                            37
+                        </strong>
+
+                        <small>
+                            of 210 total beds
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 DASHBOARD GRID
+            ====================================== -->
+
+            <div class="dashboard-grid">
+
+
+                <!-- =================================
+                     RECENT PATIENTS
+                ================================== -->
+
+                <section class="dashboard-card patients-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Patients
+                            </h2>
+
+                            <p>
+                                Recently registered patients
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="text-button"
+                            type="button"
+                        >
+                            View all
+                        </button>
+
+                    </div>
+
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        PATIENT
+                                    </th>
+
+                                    <th>
+                                        ID
+                                    </th>
+
+                                    <th>
+                                        DEPARTMENT
+                                    </th>
+
+                                    <th>
+                                        STATUS
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="person-cell">
+
+                                            <div class="person-avatar">
+                                                AS
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Amanda Sari
+                                                </strong>
+
+                                                <span>
+                                                    Female · 28
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        PT-001248
+                                    </td>
+
+                                    <td>
+                                        Internal Medicine
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="person-cell">
+
+                                            <div class="person-avatar">
+                                                RM
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Rizky Maulana
+                                                </strong>
+
+                                                <span>
+                                                    Male · 35
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        PT-001247
+                                    </td>
+
+                                    <td>
+                                        Cardiology
+                                    </td>
+
+                                    <td>
+                                        <span class="status active">
+                                            Active
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+
+                                        <div class="person-cell">
+
+                                            <div class="person-avatar">
+                                                DN
+                                            </div>
+
+                                            <div>
+
+                                                <strong>
+                                                    Dinda Nuraini
+                                                </strong>
+
+                                                <span>
+                                                    Female · 41
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+                                    <td>
+                                        PT-001246
+                                    </td>
+
+                                    <td>
+                                        Neurology
+                                    </td>
+
+                                    <td>
+                                        <span class="status pending">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     TODAY'S APPOINTMENTS
+                ================================== -->
+
+                <section class="dashboard-card appointments-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Today's Appointments
+                            </h2>
+
+                            <p>
+                                Upcoming appointments
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="text-button"
+                            type="button"
+                        >
+                            View all
+                        </button>
+
+                    </div>
+
+
+                    <div class="appointment-list">
+
+
+                        <div class="appointment-item">
+
+                            <div class="appointment-time">
+                                <strong>
+                                    09:00
+                                </strong>
+
+                                <span>
+                                    AM
+                                </span>
+                            </div>
+
+
+                            <div class="appointment-info">
+
+                                <strong>
+                                    Amanda Sari
+                                </strong>
+
+                                <span>
+                                    Dr. Dimas Santoso
+                                </span>
+
+                            </div>
+
+
+                            <span class="status confirmed">
+                                Confirmed
+                            </span>
+
+                        </div>
+
+
+                        <div class="appointment-item">
+
+                            <div class="appointment-time">
+                                <strong>
+                                    10:30
+                                </strong>
+
+                                <span>
+                                    AM
+                                </span>
+                            </div>
+
+
+                            <div class="appointment-info">
+
+                                <strong>
+                                    Rizky Maulana
+                                </strong>
+
+                                <span>
+                                    Dr. Budi Hartono
+                                </span>
+
+                            </div>
+
+
+                            <span class="status confirmed">
+                                Confirmed
+                            </span>
+
+                        </div>
+
+
+                        <div class="appointment-item">
+
+                            <div class="appointment-time">
+                                <strong>
+                                    01:00
+                                </strong>
+
+                                <span>
+                                    PM
+                                </span>
+                            </div>
+
+
+                            <div class="appointment-info">
+
+                                <strong>
+                                    Dinda Nuraini
+                                </strong>
+
+                                <span>
+                                    Dr. Maya Putri
+                                </span>
+
+                            </div>
+
+
+                            <span class="status pending">
+                                Pending
+                            </span>
+
+                        </div>
+
+
+                        <div class="appointment-item">
+
+                            <div class="appointment-time">
+                                <strong>
+                                    02:30
+                                </strong>
+
+                                <span>
+                                    PM
+                                </span>
+                            </div>
+
+
+                            <div class="appointment-info">
+
+                                <strong>
+                                    Fajar Nugraha
+                                </strong>
+
+                                <span>
+                                    Dr. Dimas Santoso
+                                </span>
+
+                            </div>
+
+
+                            <span class="status confirmed">
+                                Confirmed
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =====================================
+                 BOTTOM GRID
+            ====================================== -->
+
+            <div class="bottom-grid">
+
+
+                <!-- QUICK ACTIONS -->
+
+                <section class="dashboard-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                            <p>
+                                Common administrative tasks
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+
+                        <button
+                            class="quick-action"
+                            type="button"
+                            data-action="patient"
+                        >
+
+                            <span class="quick-icon">
+                                +
+                            </span>
+
+                            <span class="quick-text">
+
+                                <strong>
+                                    Add Patient
+                                </strong>
+
+                                <small>
+                                    Register a new patient
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="quick-action"
+                            type="button"
+                            data-action="appointment"
+                        >
+
+                            <span class="quick-icon">
+                                ◷
+                            </span>
+
+                            <span class="quick-text">
+
+                                <strong>
+                                    Add Appointment
+                                </strong>
+
+                                <small>
+                                    Schedule a patient visit
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="quick-action"
+                            type="button"
+                            data-action="staff"
+                        >
+
+                            <span class="quick-icon">
+                                ♙
+                            </span>
+
+                            <span class="quick-text">
+
+                                <strong>
+                                    Add Staff
+                                </strong>
+
+                                <small>
+                                    Register medical staff
+                                </small>
+
+                            </span>
+
+                        </button>
+
+
+                        <button
+                            class="quick-action"
+                            type="button"
+                            data-action="report"
+                        >
+
+                            <span class="quick-icon">
+                                ▤
+                            </span>
+
+                            <span class="quick-text">
+
+                                <strong>
+                                    Generate Report
+                                </strong>
+
+                                <small>
+                                    View hospital reports
+                                </small>
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- RECENT ACTIVITY -->
+
+                <section class="dashboard-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h2>
+                                Recent Activity
+                            </h2>
+
+                            <p>
+                                Latest system activity
+                            </p>
+
+                        </div>
+
+
+                        <button
+                            class="text-button"
+                            type="button"
+                        >
+                            View logs
+                        </button>
+
+                    </div>
+
+
+                    <div class="activity-list">
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">
+                                +
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    New patient registered
+                                </strong>
+
+                                <span>
+                                    Amanda Sari · 8 minutes ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">
+                                ◷
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Appointment confirmed
+                                </strong>
+
+                                <span>
+                                    Rizky Maulana · 24 minutes ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon">
+                                ♙
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    New staff account created
+                                </strong>
+
+                                <span>
+                                    Siti Amelia · 1 hour ago
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<script src="../../js/dashboard.js"></script>
+
+</body>
+
+</html>

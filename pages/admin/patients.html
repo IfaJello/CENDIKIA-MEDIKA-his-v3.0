@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Patients | Cendekia Medika</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/patients.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-layout">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-logo">
+                +
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    CENDEKIA
+                </strong>
+
+                <span>
+                    MEDIKA
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+
+            <p class="nav-label">
+                MAIN MENU
+            </p>
+
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▦
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="patients.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    Patients
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ◷
+                </span>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+
+            <p class="nav-label">
+                HOSPITAL
+            </p>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    Staff
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Departments
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Rooms & Beds
+                </span>
+
+            </a>
+
+
+
+            <p class="nav-label">
+                ADMINISTRATION
+            </p>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    User Management
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                <span>
+                    Audit Logs
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <button
+                class="logout-button"
+                type="button"
+                onclick="logout()"
+            >
+
+                <span>
+                    ↪
+                </span>
+
+                <span>
+                    Sign out
+                </span>
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================
+         MAIN
+    ====================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <button
+                    class="notification-button"
+                    type="button"
+                >
+
+                    ♧
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+
+                <div class="profile">
+
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span>
+                            Administrator
+                        </span>
+
+                    </div>
+
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =====================================
+             PAGE CONTENT
+        ====================================== -->
+
+        <section class="page-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-heading">
+
+
+                <div>
+
+                    <p class="eyebrow">
+                        PATIENT MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Patients
+                    </h1>
+
+                    <p>
+                        Manage patient records and information
+                        across Cendekia Medika.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    type="button"
+                    id="addPatientButton"
+                >
+
+                    <span>
+                        +
+                    </span>
+
+                    Add Patient
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 STATISTICS
+            ====================================== -->
+
+            <div class="stats-grid">
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Total Patients
+                    </span>
+
+                    <strong id="totalPatients">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Active
+                    </span>
+
+                    <strong id="activePatients">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <strong id="pendingPatients">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Inactive
+                    </span>
+
+                    <strong id="inactivePatients">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 PATIENT CARD
+            ====================================== -->
+
+            <section class="patients-card">
+
+
+                <!-- TOOLBAR -->
+
+                <div class="patients-toolbar">
+
+
+                    <div>
+
+                        <h2>
+                            All Patients
+                        </h2>
+
+                        <p>
+                            View and manage registered patients.
+                        </p>
+
+                    </div>
+
+
+                    <div class="toolbar-actions">
+
+
+                        <!-- SEARCH -->
+
+                        <div class="search-box">
+
+                            <span>
+                                ⌕
+                            </span>
+
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search patients..."
+                            >
+
+                        </div>
+
+
+
+                        <!-- STATUS -->
+
+                        <select
+                            id="statusFilter"
+                        >
+
+                            <option value="all">
+                                All status
+                            </option>
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="inactive">
+                                Inactive
+                            </option>
+
+                        </select>
+
+
+
+                        <!-- DEPARTMENT -->
+
+                        <select
+                            id="departmentFilter"
+                        >
+
+                            <option value="all">
+                                All departments
+                            </option>
+
+                            <option value="Internal Medicine">
+                                Internal Medicine
+                            </option>
+
+                            <option value="Cardiology">
+                                Cardiology
+                            </option>
+
+                            <option value="Neurology">
+                                Neurology
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TABLE -->
+
+                <div class="table-container">
+
+
+                    <table>
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    PATIENT
+                                </th>
+
+                                <th>
+                                    PATIENT ID
+                                </th>
+
+                                <th>
+                                    CONTACT
+                                </th>
+
+                                <th>
+                                    DEPARTMENT
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    LAST VISIT
+                                </th>
+
+                                <th>
+                                    ACTION
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="patientTableBody"
+                        >
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                >
+
+                    <div class="empty-icon">
+                        ♙
+                    </div>
+
+                    <h3>
+                        No patients found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =====================================
+     PATIENT MODAL
+====================================== -->
+
+<div
+    class="modal-overlay"
+    id="patientModal"
+>
+
+
+    <div class="modal">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    PATIENT MANAGEMENT
+                </p>
+
+                <h2 id="modalTitle">
+                    Add New Patient
+                </h2>
+
+                <p id="modalDescription">
+                    Create a new patient record.
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                type="button"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <form id="patientForm">
+
+
+            <div class="form-grid">
+
+
+                <!-- NAME -->
+
+                <div class="form-group full">
+
+                    <label for="patientName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="patientName"
+                        placeholder="Enter patient's full name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- GENDER -->
+
+                <div class="form-group">
+
+                    <label for="patientGender">
+                        Gender
+                    </label>
+
+                    <select
+                        id="patientGender"
+                        required
+                    >
+
+                        <option value="">
+                            Select gender
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- AGE -->
+
+                <div class="form-group">
+
+                    <label for="patientAge">
+                        Age
+                    </label>
+
+                    <input
+                        type="number"
+                        id="patientAge"
+                        min="0"
+                        max="120"
+                        placeholder="Age"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="patientPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="patientPhone"
+                        placeholder="+62 xxx xxxx xxxx"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="patientEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="patientEmail"
+                        placeholder="patient@example.com"
+                    >
+
+                </div>
+
+
+
+                <!-- DEPARTMENT -->
+
+                <div class="form-group">
+
+                    <label for="patientDepartment">
+                        Department
+                    </label>
+
+                    <select
+                        id="patientDepartment"
+                        required
+                    >
+
+                        <option value="">
+                            Select department
+                        </option>
+
+                        <option value="Internal Medicine">
+                            Internal Medicine
+                        </option>
+
+                        <option value="Cardiology">
+                            Cardiology
+                        </option>
+
+                        <option value="Neurology">
+                            Neurology
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- STATUS -->
+
+                <div class="form-group">
+
+                    <label for="patientStatus">
+                        Status
+                    </label>
+
+                    <select
+                        id="patientStatus"
+                        required
+                    >
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="modal-actions">
+
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelModal"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                    id="submitPatient"
+                >
+                    Create Patient
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- PATIENT DATA -->
+
+<script src="../data/patients.js"></script>
+
+
+
+<script>
+
+
+/* ========================================
+   ELEMENTS
+======================================== */
+
+const patientTableBody =
+    document.getElementById(
+        "patientTableBody"
+    );
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+const statusFilter =
+    document.getElementById(
+        "statusFilter"
+    );
+
+const departmentFilter =
+    document.getElementById(
+        "departmentFilter"
+    );
+
+const emptyState =
+    document.getElementById(
+        "emptyState"
+    );
+
+const patientModal =
+    document.getElementById(
+        "patientModal"
+    );
+
+const patientForm =
+    document.getElementById(
+        "patientForm"
+    );
+
+
+
+/* ========================================
+   GET INITIALS
+======================================== */
+
+function getInitials(name) {
+
+    return name
+        .trim()
+        .split(/\s+/)
+        .map(
+            word =>
+                word
+                    .charAt(0)
+                    .toUpperCase()
+        )
+        .join("")
+        .substring(0, 2);
+
+}
+
+
+
+/* ========================================
+   CAPITALIZE
+======================================== */
+
+function capitalize(value) {
+
+    return value
+        .charAt(0)
+        .toUpperCase()
+        + value.slice(1);
+
+}
+
+
+
+/* ========================================
+   UPDATE STATISTICS
+======================================== */
+
+function updateStatistics() {
+
+    const total =
+        patients.length;
+
+    const active =
+        patients.filter(
+            patient =>
+                patient.status === "active"
+        ).length;
+
+    const pending =
+        patients.filter(
+            patient =>
+                patient.status === "pending"
+        ).length;
+
+    const inactive =
+        patients.filter(
+            patient =>
+                patient.status === "inactive"
+        ).length;
+
+
+    document.getElementById(
+        "totalPatients"
+    ).textContent = total;
+
+    document.getElementById(
+        "activePatients"
+    ).textContent = active;
+
+    document.getElementById(
+        "pendingPatients"
+    ).textContent = pending;
+
+    document.getElementById(
+        "inactivePatients"
+    ).textContent = inactive;
+
+}
+
+
+
+/* ========================================
+   DISPLAY PATIENTS
+======================================== */
+
+function displayPatients() {
+
+    const search =
+        searchInput.value
+            .toLowerCase()
+            .trim();
+
+    const selectedStatus =
+        statusFilter.value;
+
+    const selectedDepartment =
+        departmentFilter.value;
+
+
+    let filteredPatients =
+        patients.filter(patient => {
+
+
+            const searchableText =
+                (
+                    patient.name
+                    + " "
+                    + patient.id
+                    + " "
+                    + patient.email
+                    + " "
+                    + patient.phone
+                    + " "
+                    + patient.department
+                )
+                .toLowerCase();
+
+
+            const matchesSearch =
+                searchableText
+                    .includes(search);
+
+
+            const matchesStatus =
+                selectedStatus === "all"
+                ||
+                patient.status === selectedStatus;
+
+
+            const matchesDepartment =
+                selectedDepartment === "all"
+                ||
+                patient.department === selectedDepartment;
+
+
+            return (
+                matchesSearch
+                &&
+                matchesStatus
+                &&
+                matchesDepartment
+            );
+
+        });
+
+
+    patientTableBody.innerHTML = "";
+
+
+    if (
+        filteredPatients.length === 0
+    ) {
+
+        emptyState.style.display =
+            "block";
+
+        return;
+
+    }
+
+
+    emptyState.style.display =
+        "none";
+
+
+    filteredPatients.forEach(
+        patient => {
+
+
+            const row =
+                document.createElement("tr");
+
+
+            row.innerHTML = `
+
+                <td>
+
+                    <div class="patient-cell">
+
+                        <div class="patient-avatar">
+                            ${getInitials(patient.name)}
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                ${patient.name}
+                            </strong>
+
+                            <span>
+                                ${patient.gender}, ${patient.age}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </td>
+
+
+                <td>
+
+                    <strong>
+                        ${patient.id}
+                    </strong>
+
+                </td>
+
+
+                <td>
+
+                    <div class="contact-cell">
+
+                        <strong>
+                            ${patient.phone}
+                        </strong>
+
+                        <span>
+                            ${patient.email || "No email"}
+                        </span>
+
+                    </div>
+
+                </td>
+
+
+                <td>
+                    ${patient.department}
+                </td>
+
+
+                <td>
+
+                    <span class="status ${patient.status}">
+                        ${capitalize(patient.status)}
+                    </span>
+
+                </td>
+
+
+                <td>
+                    ${patient.lastVisit}
+                </td>
+
+
+                <td>
+
+                    <button
+                        class="action-button"
+                        type="button"
+                        onclick="openActionMenu(event, '${patient.id}')"
+                    >
+                        •••
+                    </button>
+
+                </td>
+
+            `;
+
+
+            patientTableBody.appendChild(row);
+
+        }
+    );
+
+}
+
+
+
+/* ========================================
+   ACTION MENU
+======================================== */
+
+function openActionMenu(event, patientId) {
+
+    event.stopPropagation();
+
+
+    closeActionMenus();
+
+
+    const button =
+        event.currentTarget;
+
+
+    const row =
+        button.closest("tr");
+
+
+    const menu =
+        document.createElement("div");
+
+
+    menu.className =
+        "action-menu";
+
+
+    menu.innerHTML = `
+
+        <button
+            type="button"
+            onclick="viewPatient('${patientId}')"
+        >
+            View Profile
+        </button>
+
+        <button
+            type="button"
+            onclick="editPatient('${patientId}')"
+        >
+            Edit Patient
+        </button>
+
+        <button
+            type="button"
+            class="danger"
+            onclick="deactivatePatient('${patientId}')"
+        >
+            Deactivate
+        </button>
+
+    `;
+
+
+    row.style.position =
+        "relative";
+
+
+    row.appendChild(menu);
+
+}
+
+
+
+/* ========================================
+   CLOSE ACTION MENUS
+======================================== */
+
+function closeActionMenus() {
+
+    document
+        .querySelectorAll(".action-menu")
+        .forEach(
+            menu => menu.remove()
+        );
+
+}
+
+
+document.addEventListener(
+    "click",
+    closeActionMenus
+);
+
+
+
+/* ========================================
+   VIEW PATIENT
+======================================== */
+
+function viewPatient(patientId) {
+
+    const patient =
+        patients.find(
+            item =>
+                item.id === patientId
+        );
+
+
+    if (!patient) return;
+
+
+    closeActionMenus();
+
+
+    alert(
+
+        "PATIENT PROFILE\n\n"
+
+        + "Name: "
+        + patient.name
+
+        + "\n\nPatient ID: "
+        + patient.id
+
+        + "\n\nGender: "
+        + patient.gender
+
+        + "\n\nAge: "
+        + patient.age
+
+        + "\n\nPhone: "
+        + patient.phone
+
+        + "\n\nEmail: "
+        + (patient.email || "Not provided")
+
+        + "\n\nDepartment: "
+        + patient.department
+
+        + "\n\nStatus: "
+        + capitalize(patient.status)
+
+        + "\n\nLast Visit: "
+        + patient.lastVisit
+
+    );
+
+}
+
+
+
+/* ========================================
+   OPEN ADD MODAL
+======================================== */
+
+document
+    .getElementById("addPatientButton")
+    .addEventListener(
+        "click",
+        function() {
+
+            patientForm.dataset.editing =
+                "false";
+
+            patientForm.dataset.patientId =
+                "";
+
+            patientForm.reset();
+
+
+            document.getElementById(
+                "modalTitle"
+            ).textContent =
+                "Add New Patient";
+
+
+            document.getElementById(
+                "modalDescription"
+            ).textContent =
+                "Create a new patient record.";
+
+
+            document.getElementById(
+                "submitPatient"
+            ).textContent =
+                "Create Patient";
+
+
+            patientModal.classList.add(
+                "show"
+            );
+
+        }
+    );
+
+
+
+/* ========================================
+   EDIT PATIENT
+======================================== */
+
+function editPatient(patientId) {
+
+    const patient =
+        patients.find(
+            item =>
+                item.id === patientId
+        );
+
+
+    if (!patient) return;
+
+
+    closeActionMenus();
+
+
+    document.getElementById(
+        "patientName"
+    ).value =
+        patient.name;
+
+
+    document.getElementById(
+        "patientGender"
+    ).value =
+        patient.gender;
+
+
+    document.getElementById(
+        "patientAge"
+    ).value =
+        patient.age;
+
+
+    document.getElementById(
+        "patientPhone"
+    ).value =
+        patient.phone;
+
+
+    document.getElementById(
+        "patientEmail"
+    ).value =
+        patient.email;
+
+
+    document.getElementById(
+        "patientDepartment"
+    ).value =
+        patient.department;
+
+
+    document.getElementById(
+        "patientStatus"
+    ).value =
+        patient.status;
+
+
+    patientForm.dataset.editing =
+        "true";
+
+
+    patientForm.dataset.patientId =
+        patientId;
+
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+        "Edit Patient";
+
+
+    document.getElementById(
+        "modalDescription"
+    ).textContent =
+        "Update this patient's information.";
+
+
+    document.getElementById(
+        "submitPatient"
+    ).textContent =
+        "Save Changes";
+
+
+    patientModal.classList.add(
+        "show"
+    );
+
+}
+
+
+
+/* ========================================
+   DEACTIVATE PATIENT
+======================================== */
+
+function deactivatePatient(patientId) {
+
+    const patient =
+        patients.find(
+            item =>
+                item.id === patientId
+        );
+
+
+    if (!patient) return;
+
+
+    closeActionMenus();
+
+
+    const confirmed =
+        confirm(
+            "Are you sure you want to deactivate "
+            + patient.name
+            + "?"
+        );
+
+
+    if (!confirmed) return;
+
+
+    patient.status =
+        "inactive";
+
+
+    updateStatistics();
+
+    displayPatients();
+
+
+    alert(
+        patient.name
+        + " has been deactivated."
+    );
+
+}
+
+
+
+/* ========================================
+   FORM SUBMIT
+======================================== */
+
+patientForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "patientName"
+            ).value.trim();
+
+
+        const gender =
+            document.getElementById(
+                "patientGender"
+            ).value;
+
+
+        const age =
+            Number(
+                document.getElementById(
+                    "patientAge"
+                ).value
+            );
+
+
+        const phone =
+            document.getElementById(
+                "patientPhone"
+            ).value.trim();
+
+
+        const email =
+            document.getElementById(
+                "patientEmail"
+            ).value.trim();
+
+
+        const department =
+            document.getElementById(
+                "patientDepartment"
+            ).value;
+
+
+        const status =
+            document.getElementById(
+                "patientStatus"
+            ).value;
+
+
+        const editing =
+            patientForm.dataset.editing ===
+            "true";
+
+
+        /* EDIT */
+
+        if (editing) {
+
+            const patientId =
+                patientForm.dataset.patientId;
+
+
+            const patient =
+                patients.find(
+                    item =>
+                        item.id === patientId
+                );
+
+
+            if (!patient) return;
+
+
+            patient.name =
+                name;
+
+            patient.gender =
+                gender;
+
+            patient.age =
+                age;
+
+            patient.phone =
+                phone;
+
+            patient.email =
+                email;
+
+            patient.department =
+                department;
+
+            patient.status =
+                status;
+
+
+            updateStatistics();
+
+            displayPatients();
+
+            closeModal();
+
+
+            alert(
+                name
+                + " has been updated successfully!"
+            );
+
+
+            return;
+
+        }
+
+
+
+        /* CREATE */
+
+        const newId =
+            "PT-"
+            + String(
+                1249 + patients.length
+            ).padStart(
+                6,
+                "0"
+            );
+
+
+        const newPatient = {
+
+            id:
+                newId,
+
+            name:
+                name,
+
+            gender:
+                gender,
+
+            age:
+                age,
+
+            phone:
+                phone,
+
+            email:
+                email,
+
+            department:
+                department,
+
+            status:
+                status,
+
+            lastVisit:
+                "No visit yet"
+
+        };
+
+
+        patients.unshift(
+            newPatient
+        );
+
+
+        updateStatistics();
+
+        displayPatients();
+
+        closeModal();
+
+
+        alert(
+            name
+            + " has been added successfully!"
+        );
+
+    }
+);
+
+
+
+/* ========================================
+   CLOSE MODAL
+======================================== */
+
+function closeModal() {
+
+    patientModal.classList.remove(
+        "show"
+    );
+
+    patientForm.reset();
+
+}
+
+
+document
+    .getElementById("closeModal")
+    .addEventListener(
+        "click",
+        closeModal
+    );
+
+
+document
+    .getElementById("cancelModal")
+    .addEventListener(
+        "click",
+        closeModal
+    );
+
+
+patientModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target ===
+            patientModal
+        ) {
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+
+/* ========================================
+   SEARCH
+======================================== */
+
+searchInput.addEventListener(
+    "input",
+    displayPatients
+);
+
+
+
+/* ========================================
+   STATUS FILTER
+======================================== */
+
+statusFilter.addEventListener(
+    "change",
+    displayPatients
+);
+
+
+
+/* ========================================
+   DEPARTMENT FILTER
+======================================== */
+
+departmentFilter.addEventListener(
+    "change",
+    displayPatients
+);
+
+
+
+/* ========================================
+   LOGOUT
+======================================== */
+
+function logout() {
+
+    window.location.href =
+        "../index.html";
+
+}
+
+
+
+/* ========================================
+   INITIALIZE
+======================================== */
+
+updateStatistics();
+
+displayPatients();
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -31,13 +31,15 @@
 
     <aside class="sidebar">
 
+        <!-- BRAND -->
+
         <div class="sidebar-brand">
 
             <div class="sidebar-logo">
                 +
             </div>
 
-            <div>
+            <div class="brand-text">
                 <strong>CENDEKIA</strong>
                 <span>MEDIKA</span>
             </div>
@@ -45,9 +47,10 @@
         </div>
 
 
+        <!-- NAVIGATION -->
+
         <nav class="sidebar-nav">
 
-            <!-- MAIN MENU -->
 
             <p class="nav-label">
                 MAIN MENU
@@ -82,9 +85,7 @@
 
 
 
-            <!-- HOSPITAL -->
-
-            <p class="nav-label secondary">
+            <p class="nav-label">
                 HOSPITAL
             </p>
 
@@ -112,14 +113,12 @@
                 class="nav-item"
             >
                 <span class="nav-icon">▤</span>
-                <span>Rooms &amp; Beds</span>
+                <span>Rooms & Beds</span>
             </a>
 
 
 
-            <!-- ADMINISTRATION -->
-
-            <p class="nav-label secondary">
+            <p class="nav-label">
                 ADMINISTRATION
             </p>
 
@@ -162,7 +161,6 @@
         </nav>
 
 
-
         <!-- SIDEBAR BOTTOM -->
 
         <div class="sidebar-bottom">
@@ -175,7 +173,7 @@
 
                 <span>↪</span>
 
-                Sign out
+                <span>Sign out</span>
 
             </button>
 
@@ -196,23 +194,35 @@
 
         <header class="topbar">
 
-            <div class="mobile-menu">
+
+            <button
+                class="mobile-menu"
+                type="button"
+                id="mobileMenuButton"
+            >
                 ☰
-            </div>
+            </button>
 
 
             <div class="topbar-right">
 
+
+                <!-- NOTIFICATION -->
+
                 <button
                     class="notification-button"
                     type="button"
+                    title="Notifications"
                 >
+
                     ♧
 
                     <span class="notification-dot"></span>
 
                 </button>
 
+
+                <!-- PROFILE -->
 
                 <div class="profile">
 
@@ -276,15 +286,23 @@
                 </div>
 
 
-                <div class="dashboard-date">
+                <div class="today-date">
 
-                    <span>
-                        TODAY
+                    <span class="date-icon">
+                        ◷
                     </span>
 
-                    <strong id="currentDate">
-                        August 6, 2026
-                    </strong>
+                    <div>
+
+                        <strong>
+                            Today
+                        </strong>
+
+                        <span id="currentDate">
+                            August 6, 2026
+                        </span>
+
+                    </div>
 
                 </div>
 
@@ -296,31 +314,20 @@
                  HOSPITAL OVERVIEW
             ====================================== -->
 
-            <div class="stats-grid">
+            <section class="overview-section">
 
 
-                <!-- PATIENTS -->
+                <div class="section-title">
 
-                <div class="stat-card">
+                    <div>
 
-                    <div class="stat-icon patient">
-                        ♙
-                    </div>
+                        <h2>
+                            Hospital Overview
+                        </h2>
 
-
-                    <div class="stat-info">
-
-                        <span>
-                            Total Patients
-                        </span>
-
-                        <strong>
-                            1,248
-                        </strong>
-
-                        <small>
-                            +8.2% this month
-                        </small>
+                        <p>
+                            Current hospital statistics
+                        </p>
 
                     </div>
 
@@ -328,121 +335,155 @@
 
 
 
-                <!-- DOCTORS -->
+                <div class="stats-grid">
 
-                <div class="stat-card">
 
-                    <div class="stat-icon doctor">
-                        ⚕
+                    <!-- PATIENTS -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon patient">
+                            ♙
+                        </div>
+
+
+                        <div class="stat-info">
+
+                            <span>
+                                Total Patients
+                            </span>
+
+                            <strong>
+                                1,248
+                            </strong>
+
+                            <small class="positive">
+                                +8.2% this month
+                            </small>
+
+                        </div>
+
                     </div>
 
 
-                    <div class="stat-info">
 
-                        <span>
-                            Doctors
-                        </span>
+                    <!-- DOCTORS -->
 
-                        <strong>
-                            42
-                        </strong>
+                    <div class="stat-card">
 
-                        <small>
-                            3 new this month
-                        </small>
+                        <div class="stat-icon doctor">
+                            ⚕
+                        </div>
+
+
+                        <div class="stat-info">
+
+                            <span>
+                                Doctors
+                            </span>
+
+                            <strong>
+                                42
+                            </strong>
+
+                            <small>
+                                3 new this month
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- NURSES -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon nurse">
+                            ✚
+                        </div>
+
+
+                        <div class="stat-info">
+
+                            <span>
+                                Nurses
+                            </span>
+
+                            <strong>
+                                86
+                            </strong>
+
+                            <small>
+                                4 new this month
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- APPOINTMENTS -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon appointment">
+                            ◷
+                        </div>
+
+
+                        <div class="stat-info">
+
+                            <span>
+                                Today's Appointments
+                            </span>
+
+                            <strong>
+                                156
+                            </strong>
+
+                            <small>
+                                24 remaining
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- BEDS -->
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon bed">
+                            ▤
+                        </div>
+
+
+                        <div class="stat-info">
+
+                            <span>
+                                Occupied Beds
+                            </span>
+
+                            <strong>
+                                78 / 120
+                            </strong>
+
+                            <small>
+                                65% occupancy
+                            </small>
+
+                        </div>
 
                     </div>
 
                 </div>
 
-
-
-                <!-- NURSES -->
-
-                <div class="stat-card">
-
-                    <div class="stat-icon nurse">
-                        ✚
-                    </div>
-
-
-                    <div class="stat-info">
-
-                        <span>
-                            Nurses
-                        </span>
-
-                        <strong>
-                            86
-                        </strong>
-
-                        <small>
-                            4 new this month
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- APPOINTMENTS -->
-
-                <div class="stat-card">
-
-                    <div class="stat-icon appointment">
-                        ◷
-                    </div>
-
-
-                    <div class="stat-info">
-
-                        <span>
-                            Today's Appointments
-                        </span>
-
-                        <strong>
-                            156
-                        </strong>
-
-                        <small>
-                            24 pending
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- BEDS -->
-
-                <div class="stat-card">
-
-                    <div class="stat-icon bed">
-                        ▣
-                    </div>
-
-
-                    <div class="stat-info">
-
-                        <span>
-                            Occupied Beds
-                        </span>
-
-                        <strong>
-                            78 / 120
-                        </strong>
-
-                        <small>
-                            65% occupancy
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
+            </section>
 
 
 
@@ -469,13 +510,16 @@
                             </h2>
 
                             <p>
-                                Scheduled appointments for today.
+                                Scheduled appointments for today
                             </p>
 
                         </div>
 
 
-                        <a href="appointments.html">
+                        <a
+                            href="appointments.html"
+                            class="view-link"
+                        >
                             View all →
                         </a>
 
@@ -523,7 +567,7 @@
 
                                     <td>
                                         <strong>
-                                            08:30 AM
+                                            08:30
                                         </strong>
                                     </td>
 
@@ -579,7 +623,7 @@
 
                                     <td>
                                         <strong>
-                                            09:00 AM
+                                            09:00
                                         </strong>
                                     </td>
 
@@ -635,7 +679,7 @@
 
                                     <td>
                                         <strong>
-                                            09:30 AM
+                                            09:30
                                         </strong>
                                     </td>
 
@@ -691,7 +735,7 @@
 
                                     <td>
                                         <strong>
-                                            10:00 AM
+                                            10:15
                                         </strong>
                                     </td>
 
@@ -741,6 +785,7 @@
 
                                 </tr>
 
+
                             </tbody>
 
                         </table>
@@ -767,13 +812,16 @@
                             </h2>
 
                             <p>
-                                Current bed occupancy.
+                                Current bed occupancy
                             </p>
 
                         </div>
 
 
-                        <a href="rooms.html">
+                        <a
+                            href="rooms.html"
+                            class="view-link"
+                        >
                             View rooms →
                         </a>
 
@@ -781,11 +829,11 @@
 
 
 
-                    <!-- OVERALL -->
+                    <!-- OCCUPANCY -->
 
-                    <div class="capacity-overview">
+                    <div class="occupancy-summary">
 
-                        <div>
+                        <div class="occupancy-number">
 
                             <strong>
                                 78
@@ -798,7 +846,7 @@
                         </div>
 
 
-                        <strong class="capacity-percent">
+                        <strong class="occupancy-percent">
                             65%
                         </strong>
 
@@ -816,7 +864,7 @@
 
 
 
-                    <!-- CAPACITY LIST -->
+                    <!-- BED TYPES -->
 
                     <div class="capacity-list">
 
@@ -825,19 +873,19 @@
 
                             <div>
 
-                                <strong>
+                                <span class="capacity-name">
                                     ICU
-                                </strong>
+                                </span>
 
-                                <span>
-                                    Intensive Care
+                                <span class="capacity-count">
+                                    8 / 10 beds
                                 </span>
 
                             </div>
 
-                            <strong>
-                                8 / 10
-                            </strong>
+                            <span class="capacity-percent">
+                                80%
+                            </span>
 
                         </div>
 
@@ -847,19 +895,19 @@
 
                             <div>
 
-                                <strong>
+                                <span class="capacity-name">
                                     Inpatient
-                                </strong>
+                                </span>
 
-                                <span>
-                                    General Ward
+                                <span class="capacity-count">
+                                    52 / 80 beds
                                 </span>
 
                             </div>
 
-                            <strong>
-                                52 / 80
-                            </strong>
+                            <span class="capacity-percent">
+                                65%
+                            </span>
 
                         </div>
 
@@ -869,19 +917,19 @@
 
                             <div>
 
-                                <strong>
+                                <span class="capacity-name">
                                     Emergency
-                                </strong>
+                                </span>
 
-                                <span>
-                                    Emergency Unit
+                                <span class="capacity-count">
+                                    12 / 20 beds
                                 </span>
 
                             </div>
 
-                            <strong>
-                                12 / 20
-                            </strong>
+                            <span class="capacity-percent">
+                                60%
+                            </span>
 
                         </div>
 
@@ -891,19 +939,19 @@
 
                             <div>
 
-                                <strong>
+                                <span class="capacity-name">
                                     Isolation
-                                </strong>
+                                </span>
 
-                                <span>
-                                    Isolation Ward
+                                <span class="capacity-count">
+                                    6 / 10 beds
                                 </span>
 
                             </div>
 
-                            <strong>
-                                6 / 10
-                            </strong>
+                            <span class="capacity-percent">
+                                60%
+                            </span>
 
                         </div>
 
@@ -929,13 +977,16 @@
                             </h2>
 
                             <p>
-                                Current active hospital staff.
+                                Current active staff
                             </p>
 
                         </div>
 
 
-                        <a href="staff.html">
+                        <a
+                            href="staff.html"
+                            class="view-link"
+                        >
                             View staff →
                         </a>
 
@@ -945,13 +996,21 @@
 
                     <div class="staff-total">
 
-                        <strong>
-                            128
-                        </strong>
+                        <div class="staff-icon">
+                            ♙
+                        </div>
 
-                        <span>
-                            Active Staff
-                        </span>
+                        <div>
+
+                            <strong>
+                                128
+                            </strong>
+
+                            <span>
+                                Active Staff
+                            </span>
+
+                        </div>
 
                     </div>
 
@@ -960,17 +1019,11 @@
                     <div class="staff-breakdown">
 
 
-                        <div class="staff-item">
-
-                            <div class="staff-icon doctor">
-                                ⚕
-                            </div>
+                        <div class="staff-row">
 
                             <div>
 
-                                <strong>
-                                    42
-                                </strong>
+                                <span class="staff-dot doctor-dot"></span>
 
                                 <span>
                                     Doctors
@@ -978,27 +1031,29 @@
 
                             </div>
 
+                            <strong>
+                                42
+                            </strong>
+
                         </div>
 
 
 
-                        <div class="staff-item">
-
-                            <div class="staff-icon nurse">
-                                ✚
-                            </div>
+                        <div class="staff-row">
 
                             <div>
 
-                                <strong>
-                                    86
-                                </strong>
+                                <span class="staff-dot nurse-dot"></span>
 
                                 <span>
                                     Nurses
                                 </span>
 
                             </div>
+
+                            <strong>
+                                86
+                            </strong>
 
                         </div>
 
@@ -1024,13 +1079,16 @@
                             </h2>
 
                             <p>
-                                Latest system activity.
+                                Latest system activity
                             </p>
 
                         </div>
 
 
-                        <a href="audit-logs.html">
+                        <a
+                            href="audit-logs.html"
+                            class="view-link"
+                        >
                             View logs →
                         </a>
 
@@ -1047,14 +1105,14 @@
                                 +
                             </div>
 
-                            <div>
+                            <div class="activity-content">
 
                                 <strong>
                                     New doctor account created
                                 </strong>
 
                                 <span>
-                                    Dr. Maya Putri was added to the system.
+                                    Dr. Maya Putri was added to the system
                                 </span>
 
                                 <small>
@@ -1073,14 +1131,14 @@
                                 ♙
                             </div>
 
-                            <div>
+                            <div class="activity-content">
 
                                 <strong>
-                                    User account updated
+                                    Patient registered
                                 </strong>
 
                                 <span>
-                                    Siti Amelia's account information was updated.
+                                    Fajar Nugraha was registered
                                 </span>
 
                                 <small>
@@ -1099,14 +1157,14 @@
                                 ◷
                             </div>
 
-                            <div>
+                            <div class="activity-content">
 
                                 <strong>
                                     Appointment confirmed
                                 </strong>
 
                                 <span>
-                                    APT-0008 was confirmed.
+                                    APT-0018 was confirmed
                                 </span>
 
                                 <small>
@@ -1122,21 +1180,21 @@
                         <div class="activity-item">
 
                             <div class="activity-icon">
-                                ♙
+                                ⚙
                             </div>
 
-                            <div>
+                            <div class="activity-content">
 
                                 <strong>
-                                    New patient registered
+                                    User account updated
                                 </strong>
 
                                 <span>
-                                    Patient PT-001249 was registered.
+                                    Nurse account permissions were updated
                                 </span>
 
                                 <small>
-                                    45 minutes ago
+                                    48 minutes ago
                                 </small>
 
                             </div>
@@ -1171,9 +1229,9 @@ function logout() {
 }
 
 
-/* =====================================
+/* ========================================
    CURRENT DATE
-===================================== */
+======================================== */
 
 const currentDate =
     document.getElementById(
@@ -1181,22 +1239,60 @@ const currentDate =
     );
 
 
-const today =
-    new Date();
+if (currentDate) {
+
+    const today =
+        new Date();
 
 
-currentDate.textContent =
-    today.toLocaleDateString(
-        "en-US",
-        {
-            month: "long",
-            day: "numeric",
-            year: "numeric"
+    currentDate.textContent =
+        today.toLocaleDateString(
+            "en-US",
+            {
+                month: "long",
+                day: "numeric",
+                year: "numeric"
+            }
+        );
+
+}
+
+
+/* ========================================
+   MOBILE SIDEBAR
+======================================== */
+
+const mobileMenuButton =
+    document.getElementById(
+        "mobileMenuButton"
+    );
+
+
+const sidebar =
+    document.querySelector(
+        ".sidebar"
+    );
+
+
+if (
+    mobileMenuButton &&
+    sidebar
+) {
+
+    mobileMenuButton.addEventListener(
+        "click",
+        function () {
+
+            sidebar.classList.toggle(
+                "open"
+            );
+
         }
     );
 
-</script>
+}
 
+</script>
 
 </body>
 

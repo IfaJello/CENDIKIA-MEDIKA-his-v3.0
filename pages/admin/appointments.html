@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Appointments | Cendekia Medika</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/appointments.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-layout">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-logo">
+                +
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    CENDEKIA
+                </strong>
+
+                <span>
+                    MEDIKA
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-label">
+                MAIN MENU
+            </p>
+
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">▦</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="patients.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">♙</span>
+                <span>Patients</span>
+            </a>
+
+
+            <a
+                href="appointments.html"
+                class="nav-item active"
+            >
+                <span class="nav-icon">◷</span>
+                <span>Appointments</span>
+            </a>
+
+
+            <p class="nav-label">
+                HOSPITAL
+            </p>
+
+
+            <a
+                href="staff.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">♙</span>
+                <span>Staff</span>
+            </a>
+
+
+            <a
+                href="departments.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">▤</span>
+                <span>Departments</span>
+            </a>
+
+
+            <a
+                href="rooms.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">▤</span>
+                <span>Rooms & Beds</span>
+            </a>
+
+
+            <p class="nav-label">
+                ADMINISTRATION
+            </p>
+
+
+            <a
+                href="users.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">♙</span>
+                <span>User Management</span>
+            </a>
+
+
+            <a
+                href="reports.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">▤</span>
+                <span>Reports</span>
+            </a>
+
+
+            <a
+                href="audit-logs.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">◉</span>
+                <span>Audit Logs</span>
+            </a>
+
+
+            <a
+                href="settings.html"
+                class="nav-item"
+            >
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button
+                class="logout-button"
+                type="button"
+                onclick="logout()"
+            >
+
+                <span>↪</span>
+
+                <span>Sign out</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+
+            <div class="topbar-right">
+
+                <button
+                    class="notification-button"
+                    type="button"
+                >
+                    ♧
+                    <span class="notification-dot"></span>
+                </button>
+
+
+                <div class="profile">
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span>
+                            Administrator
+                        </span>
+
+                    </div>
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- PAGE -->
+
+        <section class="page-content">
+
+
+            <!-- HEADER -->
+
+            <div class="page-heading">
+
+                <div>
+
+                    <p class="eyebrow">
+                        SCHEDULING
+                    </p>
+
+                    <h1>
+                        Appointments
+                    </h1>
+
+                    <p>
+                        Manage and monitor patient appointments
+                        across Cendekia Medika.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    type="button"
+                    id="addAppointmentButton"
+                >
+                    <span>+</span>
+                    Add Appointment
+                </button>
+
+            </div>
+
+
+
+            <!-- STATISTICS -->
+
+            <div class="stats-grid">
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Total Appointments
+                    </span>
+
+                    <strong id="totalAppointments">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Confirmed
+                    </span>
+
+                    <strong id="confirmedAppointments">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <strong id="pendingAppointments">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Cancelled
+                    </span>
+
+                    <strong id="cancelledAppointments">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- APPOINTMENT CARD -->
+
+            <section class="appointments-card">
+
+
+                <!-- TOOLBAR -->
+
+                <div class="appointments-toolbar">
+
+                    <div>
+
+                        <h2>
+                            All Appointments
+                        </h2>
+
+                        <p>
+                            View and manage scheduled appointments.
+                        </p>
+
+                    </div>
+
+
+                    <div class="toolbar-actions">
+
+
+                        <div class="search-box">
+
+                            <span>
+                                ⌕
+                            </span>
+
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search appointments..."
+                            >
+
+                        </div>
+
+
+                        <select id="statusFilter">
+
+                            <option value="all">
+                                All status
+                            </option>
+
+                            <option value="confirmed">
+                                Confirmed
+                            </option>
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="cancelled">
+                                Cancelled
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TABLE -->
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    APPOINTMENT
+                                </th>
+
+                                <th>
+                                    PATIENT
+                                </th>
+
+                                <th>
+                                    DOCTOR
+                                </th>
+
+                                <th>
+                                    DEPARTMENT
+                                </th>
+
+                                <th>
+                                    DATE & TIME
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    ACTION
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="appointmentTableBody"
+                        ></tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                >
+
+                    <div class="empty-icon">
+                        ◷
+                    </div>
+
+                    <h3>
+                        No appointments found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filter.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+
+<!-- ADD / EDIT MODAL -->
+
+<div
+    class="modal-overlay"
+    id="appointmentModal"
+>
+
+    <div class="modal">
+
+
+        <div class="modal-header">
+
+            <div>
+
+                <p class="eyebrow">
+                    SCHEDULING
+                </p>
+
+                <h2 id="modalTitle">
+                    Add Appointment
+                </h2>
+
+                <p id="modalDescription">
+                    Schedule a new patient appointment.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+
+        <form id="appointmentForm">
+
+            <div class="form-grid">
+
+
+                <div class="form-group full">
+
+                    <label for="appointmentPatient">
+                        Patient
+                    </label>
+
+                    <input
+                        type="text"
+                        id="appointmentPatient"
+                        placeholder="Enter patient name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="appointmentPatientId">
+                        Patient ID
+                    </label>
+
+                    <input
+                        type="text"
+                        id="appointmentPatientId"
+                        placeholder="PT-001xxx"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="appointmentDoctor">
+                        Doctor
+                    </label>
+
+                    <select
+                        id="appointmentDoctor"
+                        required
+                    >
+
+                        <option value="">
+                            Select doctor
+                        </option>
+
+                        <option>
+                            Dr. Dimas Santoso
+                        </option>
+
+                        <option>
+                            Dr. Maya Putri
+                        </option>
+
+                        <option>
+                            Dr. Budi Hartono
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="appointmentDepartment">
+                        Department
+                    </label>
+
+                    <select
+                        id="appointmentDepartment"
+                        required
+                    >
+
+                        <option value="">
+                            Select department
+                        </option>
+
+                        <option>
+                            Internal Medicine
+                        </option>
+
+                        <option>
+                            Cardiology
+                        </option>
+
+                        <option>
+                            Neurology
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="appointmentDate">
+                        Date
+                    </label>
+
+                    <input
+                        type="date"
+                        id="appointmentDate"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="appointmentTime">
+                        Time
+                    </label>
+
+                    <input
+                        type="time"
+                        id="appointmentTime"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="appointmentStatus">
+                        Status
+                    </label>
+
+                    <select
+                        id="appointmentStatus"
+                        required
+                    >
+
+                        <option value="confirmed">
+                            Confirmed
+                        </option>
+
+                        <option value="pending">
+                            Pending
+                        </option>
+
+                        <option value="cancelled">
+                            Cancelled
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="modal-actions">
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelModal"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                    id="submitAppointment"
+                >
+                    Create Appointment
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+
+<!-- DATA -->
+
+<script src="../../data/appointments.js"></script>
+
+
+<script>
+
+console.log(
+    "Appointments data loaded:",
+    appointments
+);
+
+console.log(
+    "Total appointments:",
+    appointments.length
+);
+
+
+/* ELEMENTS */
+
+const appointmentTableBody =
+    document.getElementById(
+        "appointmentTableBody"
+    );
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+const statusFilter =
+    document.getElementById(
+        "statusFilter"
+    );
+
+const emptyState =
+    document.getElementById(
+        "emptyState"
+    );
+
+const appointmentModal =
+    document.getElementById(
+        "appointmentModal"
+    );
+
+const appointmentForm =
+    document.getElementById(
+        "appointmentForm"
+    );
+
+
+
+/* INITIALS */
+
+function getInitials(name) {
+
+    return name
+        .trim()
+        .split(/\s+/)
+        .map(
+            word =>
+                word.charAt(0).toUpperCase()
+        )
+        .join("")
+        .substring(0, 2);
+
+}
+
+
+
+/* CAPITALIZE */
+
+function capitalize(value) {
+
+    return value
+        .charAt(0)
+        .toUpperCase()
+        + value.slice(1);
+
+}
+
+
+
+/* STATISTICS */
+
+function updateStatistics() {
+
+    document.getElementById(
+        "totalAppointments"
+    ).textContent =
+        appointments.length;
+
+
+    document.getElementById(
+        "confirmedAppointments"
+    ).textContent =
+        appointments.filter(
+            item =>
+                item.status === "confirmed"
+        ).length;
+
+
+    document.getElementById(
+        "pendingAppointments"
+    ).textContent =
+        appointments.filter(
+            item =>
+                item.status === "pending"
+        ).length;
+
+
+    document.getElementById(
+        "cancelledAppointments"
+    ).textContent =
+        appointments.filter(
+            item =>
+                item.status === "cancelled"
+        ).length;
+
+}
+
+
+
+/* DISPLAY */
+
+function displayAppointments() {
+
+    const search =
+        searchInput.value
+            .toLowerCase()
+            .trim();
+
+    const selectedStatus =
+        statusFilter.value;
+
+
+    let filtered =
+        appointments.filter(
+            appointment => {
+
+                const searchableText = (
+
+                    appointment.id
+                    + " "
+                    + appointment.patient
+                    + " "
+                    + appointment.patientId
+                    + " "
+                    + appointment.doctor
+                    + " "
+                    + appointment.department
+
+                ).toLowerCase();
+
+
+                const matchesSearch =
+                    searchableText.includes(
+                        search
+                    );
+
+
+                const matchesStatus =
+                    selectedStatus === "all"
+                    ||
+                    appointment.status ===
+                    selectedStatus;
+
+
+                return (
+                    matchesSearch
+                    &&
+                    matchesStatus
+                );
+
+            }
+        );
+
+
+    appointmentTableBody.innerHTML =
+        "";
+
+
+    if (filtered.length === 0) {
+
+        emptyState.style.display =
+            "block";
+
+        return;
+
+    }
+
+
+    emptyState.style.display =
+        "none";
+
+
+    filtered.forEach(
+        appointment => {
+
+            const row =
+                document.createElement("tr");
+
+
+            row.innerHTML = `
+
+                <td>
+                    <strong>
+                        ${appointment.id}
+                    </strong>
+                </td>
+
+
+                <td>
+
+                    <div class="patient-cell">
+
+                        <div class="patient-avatar">
+                            ${getInitials(
+                                appointment.patient
+                            )}
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                ${appointment.patient}
+                            </strong>
+
+                            <span>
+                                ${appointment.patientId}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </td>
+
+
+                <td>
+                    <strong>
+                        ${appointment.doctor}
+                    </strong>
+                </td>
+
+
+                <td>
+                    ${appointment.department}
+                </td>
+
+
+                <td>
+
+                    <div class="appointment-time">
+
+                        <strong>
+                            ${appointment.date}
+                        </strong>
+
+                        <span>
+                            ${appointment.time}
+                        </span>
+
+                    </div>
+
+                </td>
+
+
+                <td>
+
+                    <span
+                        class="status ${appointment.status}"
+                    >
+                        ${capitalize(
+                            appointment.status
+                        )}
+                    </span>
+
+                </td>
+
+
+                <td>
+
+                    <button
+                        class="action-button"
+                        type="button"
+                        onclick="openActionMenu(event, '${appointment.id}')"
+                    >
+                        •••
+                    </button>
+
+                </td>
+
+            `;
+
+
+            appointmentTableBody.appendChild(
+                row
+            );
+
+        }
+    );
+
+}
+
+
+
+/* ACTION MENU */
+
+function openActionMenu(
+    event,
+    appointmentId
+) {
+
+    event.stopPropagation();
+
+    closeActionMenus();
+
+
+    const row =
+        event.currentTarget.closest("tr");
+
+
+    const menu =
+        document.createElement("div");
+
+
+    menu.className =
+        "action-menu";
+
+
+    menu.innerHTML = `
+
+        <button
+            type="button"
+            onclick="viewAppointment('${appointmentId}')"
+        >
+            View Details
+        </button>
+
+        <button
+            type="button"
+            onclick="editAppointment('${appointmentId}')"
+        >
+            Edit Appointment
+        </button>
+
+        <button
+            type="button"
+            class="danger"
+            onclick="cancelAppointment('${appointmentId}')"
+        >
+            Cancel Appointment
+        </button>
+
+    `;
+
+
+    row.style.position =
+        "relative";
+
+    row.appendChild(menu);
+
+}
+
+
+
+/* CLOSE MENUS */
+
+function closeActionMenus() {
+
+    document
+        .querySelectorAll(".action-menu")
+        .forEach(
+            menu =>
+                menu.remove()
+        );
+
+}
+
+
+document.addEventListener(
+    "click",
+    closeActionMenus
+);
+
+
+
+/* VIEW */
+
+function viewAppointment(
+    appointmentId
+) {
+
+    const appointment =
+        appointments.find(
+            item =>
+                item.id === appointmentId
+        );
+
+
+    if (!appointment) return;
+
+
+    closeActionMenus();
+
+
+    alert(
+
+        "APPOINTMENT DETAILS\n\n"
+
+        + "Appointment ID: "
+        + appointment.id
+
+        + "\n\nPatient: "
+        + appointment.patient
+
+        + "\n\nPatient ID: "
+        + appointment.patientId
+
+        + "\n\nDoctor: "
+        + appointment.doctor
+
+        + "\n\nDepartment: "
+        + appointment.department
+
+        + "\n\nDate: "
+        + appointment.date
+
+        + "\n\nTime: "
+        + appointment.time
+
+        + "\n\nStatus: "
+        + capitalize(
+            appointment.status
+        )
+
+    );
+
+}
+
+
+
+/* ADD */
+
+document
+    .getElementById(
+        "addAppointmentButton"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            appointmentForm.dataset.editing =
+                "false";
+
+            appointmentForm.dataset.id =
+                "";
+
+            appointmentForm.reset();
+
+
+            document.getElementById(
+                "modalTitle"
+            ).textContent =
+                "Add Appointment";
+
+
+            document.getElementById(
+                "modalDescription"
+            ).textContent =
+                "Schedule a new patient appointment.";
+
+
+            document.getElementById(
+                "submitAppointment"
+            ).textContent =
+                "Create Appointment";
+
+
+            appointmentModal.classList.add(
+                "show"
+            );
+
+        }
+    );
+
+
+
+/* EDIT */
+
+function editAppointment(
+    appointmentId
+) {
+
+    const appointment =
+        appointments.find(
+            item =>
+                item.id === appointmentId
+        );
+
+
+    if (!appointment) return;
+
+
+    closeActionMenus();
+
+
+    document.getElementById(
+        "appointmentPatient"
+    ).value =
+        appointment.patient;
+
+
+    document.getElementById(
+        "appointmentPatientId"
+    ).value =
+        appointment.patientId;
+
+
+    document.getElementById(
+        "appointmentDoctor"
+    ).value =
+        appointment.doctor;
+
+
+    document.getElementById(
+        "appointmentDepartment"
+    ).value =
+        appointment.department;
+
+
+    document.getElementById(
+        "appointmentStatus"
+    ).value =
+        appointment.status;
+
+
+    appointmentForm.dataset.editing =
+        "true";
+
+    appointmentForm.dataset.id =
+        appointmentId;
+
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+        "Edit Appointment";
+
+
+    document.getElementById(
+        "modalDescription"
+    ).textContent =
+        "Update this appointment.";
+
+
+    document.getElementById(
+        "submitAppointment"
+    ).textContent =
+        "Save Changes";
+
+
+    appointmentModal.classList.add(
+        "show"
+    );
+
+}
+
+
+
+/* CANCEL */
+
+function cancelAppointment(
+    appointmentId
+) {
+
+    const appointment =
+        appointments.find(
+            item =>
+                item.id === appointmentId
+        );
+
+
+    if (!appointment) return;
+
+
+    closeActionMenus();
+
+
+    const confirmed =
+        confirm(
+            "Cancel the appointment for "
+            + appointment.patient
+            + "?"
+        );
+
+
+    if (!confirmed) return;
+
+
+    appointment.status =
+        "cancelled";
+
+
+    updateStatistics();
+
+    displayAppointments();
+
+
+    alert(
+        "Appointment cancelled successfully."
+    );
+
+}
+
+
+
+/* SUBMIT */
+
+appointmentForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const patient =
+            document.getElementById(
+                "appointmentPatient"
+            ).value.trim();
+
+
+        const patientId =
+            document.getElementById(
+                "appointmentPatientId"
+            ).value.trim();
+
+
+        const doctor =
+            document.getElementById(
+                "appointmentDoctor"
+            ).value;
+
+
+        const department =
+            document.getElementById(
+                "appointmentDepartment"
+            ).value;
+
+
+        const date =
+            document.getElementById(
+                "appointmentDate"
+            ).value;
+
+
+        const time =
+            document.getElementById(
+                "appointmentTime"
+            ).value;
+
+
+        const status =
+            document.getElementById(
+                "appointmentStatus"
+            ).value;
+
+
+        const editing =
+            appointmentForm.dataset.editing ===
+            "true";
+
+
+        /* EDIT */
+
+        if (editing) {
+
+            const appointmentId =
+                appointmentForm.dataset.id;
+
+
+            const appointment =
+                appointments.find(
+                    item =>
+                        item.id ===
+                        appointmentId
+                );
+
+
+            if (!appointment) return;
+
+
+            appointment.patient =
+                patient;
+
+            appointment.patientId =
+                patientId;
+
+            appointment.doctor =
+                doctor;
+
+            appointment.department =
+                department;
+
+            appointment.date =
+                formatDate(date);
+
+            appointment.time =
+                formatTime(time);
+
+            appointment.status =
+                status;
+
+
+            updateStatistics();
+
+            displayAppointments();
+
+            closeModal();
+
+
+            alert(
+                "Appointment updated successfully!"
+            );
+
+            return;
+
+        }
+
+
+
+        /* CREATE */
+
+        const newId =
+            "APT-"
+            + String(
+                appointments.length + 1
+            ).padStart(
+                4,
+                "0"
+            );
+
+
+        const newAppointment = {
+
+            id:
+                newId,
+
+            patient:
+                patient,
+
+            patientId:
+                patientId,
+
+            doctor:
+                doctor,
+
+            department:
+                department,
+
+            date:
+                formatDate(date),
+
+            time:
+                formatTime(time),
+
+            status:
+                status
+
+        };
+
+
+        appointments.unshift(
+            newAppointment
+        );
+
+
+        updateStatistics();
+
+        displayAppointments();
+
+        closeModal();
+
+
+        alert(
+            "Appointment created successfully!"
+        );
+
+    }
+);
+
+
+
+/* DATE */
+
+function formatDate(date) {
+
+    if (!date) return "";
+
+    const parts =
+        date.split("-");
+
+
+    const months = [
+
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+
+    ];
+
+
+    return (
+
+        parts[2]
+        + " "
+        + months[
+            Number(parts[1]) - 1
+        ]
+        + " "
+        + parts[0]
+
+    );
+
+}
+
+
+
+/* TIME */
+
+function formatTime(time) {
+
+    if (!time) return "";
+
+
+    const parts =
+        time.split(":");
+
+
+    let hour =
+        Number(parts[0]);
+
+
+    const minutes =
+        parts[1];
+
+
+    const suffix =
+        hour >= 12
+            ? "PM"
+            : "AM";
+
+
+    hour =
+        hour % 12 || 12;
+
+
+    return (
+        hour
+        + ":"
+        + minutes
+        + " "
+        + suffix
+    );
+
+}
+
+
+
+/* CLOSE MODAL */
+
+function closeModal() {
+
+    appointmentModal.classList.remove(
+        "show"
+    );
+
+    appointmentForm.reset();
+
+}
+
+
+document
+    .getElementById(
+        "closeModal"
+    )
+    .addEventListener(
+        "click",
+        closeModal
+    );
+
+
+document
+    .getElementById(
+        "cancelModal"
+    )
+    .addEventListener(
+        "click",
+        closeModal
+    );
+
+
+appointmentModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target ===
+            appointmentModal
+        ) {
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+
+/* SEARCH */
+
+searchInput.addEventListener(
+    "input",
+    displayAppointments
+);
+
+
+
+/* FILTER */
+
+statusFilter.addEventListener(
+    "change",
+    displayAppointments
+);
+
+
+
+/* LOGOUT */
+
+function logout() {
+
+    window.location.href =
+        "../../index.html";
+
+}
+
+
+
+/* INITIALIZE */
+
+updateStatistics();
+
+displayAppointments();
+
+</script>
+
+</body>
+
+</html>

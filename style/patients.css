@@ -3,9 +3,10 @@
 ========================================= */
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
 }
 
 
@@ -40,19 +41,20 @@ body {
     width: 250px;
     min-width: 250px;
 
-    min-height: 100vh;
-
     background: #ffffff;
 
-    border-right: 1px solid #e7ebf0;
+    border-right: 1px solid #e7eaf0;
 
     display: flex;
     flex-direction: column;
 
     position: fixed;
-    left: 0;
+
     top: 0;
+    left: 0;
     bottom: 0;
+
+    z-index: 100;
 }
 
 
@@ -63,14 +65,14 @@ body {
 .sidebar-brand {
     height: 82px;
 
-    padding: 0 24px;
-
     display: flex;
     align-items: center;
 
     gap: 12px;
 
-    border-bottom: 1px solid #edf0f4;
+    padding: 0 24px;
+
+    border-bottom: 1px solid #eef0f4;
 }
 
 
@@ -88,7 +90,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 700;
 }
 
@@ -97,23 +99,23 @@ body {
     display: flex;
     flex-direction: column;
 
-    line-height: 1.05;
+    line-height: 1;
 }
 
 
 .brand-text strong {
     font-size: 15px;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
 }
 
 
 .brand-text span {
-    font-size: 11px;
-    letter-spacing: 2px;
-
+    font-size: 10px;
+    
     color: #159c8c;
 
-    margin-top: 4px;
+    letter-spacing: 2px;
+
 }
 
 
@@ -122,11 +124,11 @@ body {
 ========================================= */
 
 .sidebar-nav {
-    padding: 22px 14px;
-
-    flex: 1;
+    padding: 24px 14px;
 
     overflow-y: auto;
+
+    flex: 1;
 }
 
 
@@ -140,12 +142,12 @@ body {
 
     padding: 0 12px;
 
-    margin: 0 0 9px;
+    margin-bottom: 8px;
 }
 
 
 .nav-label:not(:first-child) {
-    margin-top: 24px;
+    margin-top: 26px;
 }
 
 
@@ -161,32 +163,18 @@ body {
 
     margin-bottom: 4px;
 
-    border-radius: 9px;
+    border-radius: 8px;
 
     color: #687383;
 
     text-decoration: none;
 
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
 
     transition:
         background 0.2s ease,
         color 0.2s ease;
-}
-
-
-.nav-icon {
-    width: 22px;
-    min-width: 22px;
-
-    height: 22px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 16px;
 }
 
 
@@ -204,12 +192,27 @@ body {
 }
 
 
+.nav-icon {
+    width: 22px;
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+
 /* =========================================
    SIDEBAR BOTTOM
 ========================================= */
 
 .sidebar-bottom {
-    padding: 15px;
+    padding: 16px;
 
     border-top: 1px solid #edf0f4;
 }
@@ -218,13 +221,13 @@ body {
 .logout-button {
     width: 100%;
 
-    height: 42px;
+    height: 44px;
 
     border: none;
 
     background: transparent;
 
-    border-radius: 9px;
+    border-radius: 8px;
 
     display: flex;
     align-items: center;
@@ -235,9 +238,12 @@ body {
 
     color: #737d8b;
 
-    font-size: 13px;
+    font-size: 14px;
 
     cursor: pointer;
+
+    text-align: left;
+
 }
 
 
@@ -275,7 +281,7 @@ body {
     align-items: center;
     justify-content: flex-end;
 
-    padding: 0 32px;
+    padding: 0 34px;
 }
 
 
@@ -283,7 +289,7 @@ body {
     display: flex;
     align-items: center;
 
-    gap: 24px;
+    gap: 22px;
 }
 
 
@@ -293,14 +299,14 @@ body {
 
 
 .notification-button {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
 
     border: none;
 
     background: transparent;
 
-    border-radius: 50%;
+    border-radius: 8px;
 
     font-size: 20px;
 
@@ -343,8 +349,8 @@ body {
 
 
 .profile-avatar {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
 
     border-radius: 50%;
 
@@ -364,7 +370,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    line-height: 1.2;
+    gap: 2px;
 }
 
 
@@ -378,16 +384,13 @@ body {
 
     color: #8a94a2;
 
-    margin-top: 3px;
 }
 
 
 .profile-arrow {
     color: #929aa6;
 
-    font-size: 13px;
-
-    margin-left: 5px;
+    margin-left: 4px;
 }
 
 
@@ -396,13 +399,15 @@ body {
 ========================================= */
 
 .page-content {
-    padding: 34px 36px 45px;
+    padding: 34px;
 }
 
 
 .page-heading {
     display: flex;
+
     align-items: flex-end;
+    
     justify-content: space-between;
 
     gap: 30px;
@@ -420,25 +425,23 @@ body {
 
     color: #159c8c;
 
-    margin-bottom: 7px;
+    margin-bottom: 8px;
 }
 
 
 .page-heading h1 {
-    font-size: 29px;
+    font-size: 27px;
 
-    line-height: 1.15;
+    line-height: 1.25;
 
-    letter-spacing: -0.5px;
-
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 }
 
 
 .page-heading p:not(.eyebrow) {
     color: #7b8593;
 
-    font-size: 13px;
+    font-size: 14px;
 }
 
 

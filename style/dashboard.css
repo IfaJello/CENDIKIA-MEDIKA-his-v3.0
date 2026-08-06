@@ -96,7 +96,7 @@ body {
     display: flex;
     flex-direction: column;
 
-    line-height: 1.1;
+    line-height: 1;
 }
 
 
@@ -107,7 +107,7 @@ body {
 
 
 .brand-text span {
-    font-size: 11px;
+    font-size: 10px;
 
     color: #718096;
 

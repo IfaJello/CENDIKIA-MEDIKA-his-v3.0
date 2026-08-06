@@ -31,6 +31,7 @@
 
     <aside class="sidebar">
 
+
         <!-- BRAND -->
 
         <div class="sidebar-brand">
@@ -40,17 +41,27 @@
             </div>
 
             <div class="brand-text">
-                <strong>CENDEKIA</strong>
-                <span>MEDIKA</span>
+
+                <strong>
+                    CENDEKIA
+                </strong>
+
+                <span>
+                    MEDIKA
+                </span>
+
             </div>
 
         </div>
+
 
 
         <!-- NAVIGATION -->
 
         <nav class="sidebar-nav">
 
+
+            <!-- MAIN MENU -->
 
             <p class="nav-label">
                 MAIN MENU
@@ -61,8 +72,15 @@
                 href="dashboard.html"
                 class="nav-item active"
             >
-                <span class="nav-icon">▦</span>
-                <span>Dashboard</span>
+
+                <span class="nav-icon">
+                    ▦
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
             </a>
 
 
@@ -70,8 +88,15 @@
                 href="patients.html"
                 class="nav-item"
             >
-                <span class="nav-icon">♙</span>
-                <span>Patients</span>
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    Patients
+                </span>
+
             </a>
 
 
@@ -79,13 +104,22 @@
                 href="appointments.html"
                 class="nav-item"
             >
-                <span class="nav-icon">◷</span>
-                <span>Appointments</span>
+
+                <span class="nav-icon">
+                    ◷
+                </span>
+
+                <span>
+                    Appointments
+                </span>
+
             </a>
 
 
 
-            <p class="nav-label">
+            <!-- HOSPITAL -->
+
+            <p class="nav-label secondary">
                 HOSPITAL
             </p>
 
@@ -94,8 +128,15 @@
                 href="staff.html"
                 class="nav-item"
             >
-                <span class="nav-icon">♙</span>
-                <span>Staff</span>
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    Staff
+                </span>
+
             </a>
 
 
@@ -103,8 +144,15 @@
                 href="departments.html"
                 class="nav-item"
             >
-                <span class="nav-icon">▤</span>
-                <span>Departments</span>
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Departments
+                </span>
+
             </a>
 
 
@@ -112,13 +160,22 @@
                 href="rooms.html"
                 class="nav-item"
             >
-                <span class="nav-icon">▤</span>
-                <span>Rooms & Beds</span>
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Rooms & Beds
+                </span>
+
             </a>
 
 
 
-            <p class="nav-label">
+            <!-- ADMINISTRATION -->
+
+            <p class="nav-label secondary">
                 ADMINISTRATION
             </p>
 
@@ -127,8 +184,15 @@
                 href="users.html"
                 class="nav-item"
             >
-                <span class="nav-icon">♙</span>
-                <span>User Management</span>
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    User Management
+                </span>
+
             </a>
 
 
@@ -136,8 +200,15 @@
                 href="reports.html"
                 class="nav-item"
             >
-                <span class="nav-icon">▤</span>
-                <span>Reports</span>
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
             </a>
 
 
@@ -145,8 +216,15 @@
                 href="audit-logs.html"
                 class="nav-item"
             >
-                <span class="nav-icon">◉</span>
-                <span>Audit Logs</span>
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                <span>
+                    Audit Logs
+                </span>
+
             </a>
 
 
@@ -154,14 +232,22 @@
                 href="settings.html"
                 class="nav-item"
             >
-                <span class="nav-icon">⚙</span>
-                <span>Settings</span>
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
             </a>
 
         </nav>
 
 
-        <!-- SIDEBAR BOTTOM -->
+
+        <!-- SIGN OUT -->
 
         <div class="sidebar-bottom">
 
@@ -171,9 +257,13 @@
                 onclick="logout()"
             >
 
-                <span>↪</span>
+                <span>
+                    ↪
+                </span>
 
-                <span>Sign out</span>
+                <span>
+                    Sign out
+                </span>
 
             </button>
 
@@ -195,13 +285,9 @@
         <header class="topbar">
 
 
-            <button
-                class="mobile-menu"
-                type="button"
-                id="mobileMenuButton"
-            >
+            <div class="mobile-menu">
                 ☰
-            </button>
+            </div>
 
 
             <div class="topbar-right">
@@ -212,7 +298,6 @@
                 <button
                     class="notification-button"
                     type="button"
-                    title="Notifications"
                 >
 
                     ♧
@@ -220,6 +305,7 @@
                     <span class="notification-dot"></span>
 
                 </button>
+
 
 
                 <!-- PROFILE -->
@@ -273,36 +359,27 @@
                         ADMINISTRATION
                     </p>
 
-
                     <h1>
                         Good morning, Admin
                     </h1>
 
-
                     <p>
-                        Here's an overview of Cendekia Medika today.
+                        Here's an overview of
+                        Cendekia Medika today.
                     </p>
 
                 </div>
 
 
-                <div class="today-date">
+                <div class="today-info">
 
-                    <span class="date-icon">
-                        ◷
+                    <span class="today-label">
+                        TODAY
                     </span>
 
-                    <div>
-
-                        <strong>
-                            Today
-                        </strong>
-
-                        <span id="currentDate">
-                            August 6, 2026
-                        </span>
-
-                    </div>
+                    <strong>
+                        August 6, 2026
+                    </strong>
 
                 </div>
 
@@ -346,7 +423,6 @@
                             ♙
                         </div>
 
-
                         <div class="stat-info">
 
                             <span>
@@ -357,7 +433,7 @@
                                 1,248
                             </strong>
 
-                            <small class="positive">
+                            <small>
                                 +8.2% this month
                             </small>
 
@@ -374,7 +450,6 @@
                         <div class="stat-icon doctor">
                             ⚕
                         </div>
-
 
                         <div class="stat-info">
 
@@ -404,7 +479,6 @@
                             ✚
                         </div>
 
-
                         <div class="stat-info">
 
                             <span>
@@ -433,7 +507,6 @@
                             ◷
                         </div>
 
-
                         <div class="stat-info">
 
                             <span>
@@ -445,7 +518,7 @@
                             </strong>
 
                             <small>
-                                24 remaining
+                                24 pending
                             </small>
 
                         </div>
@@ -458,10 +531,9 @@
 
                     <div class="stat-card">
 
-                        <div class="stat-icon bed">
+                        <div class="stat-icon beds">
                             ▤
                         </div>
-
 
                         <div class="stat-info">
 
@@ -567,10 +639,9 @@
 
                                     <td>
                                         <strong>
-                                            08:30
+                                            08:30 AM
                                         </strong>
                                     </td>
-
 
                                     <td>
 
@@ -596,16 +667,13 @@
 
                                     </td>
 
-
                                     <td>
                                         Dr. Dimas Santoso
                                     </td>
 
-
                                     <td>
                                         Internal Medicine
                                     </td>
-
 
                                     <td>
 
@@ -623,10 +691,9 @@
 
                                     <td>
                                         <strong>
-                                            09:00
+                                            09:00 AM
                                         </strong>
                                     </td>
-
 
                                     <td>
 
@@ -652,16 +719,13 @@
 
                                     </td>
 
-
                                     <td>
                                         Dr. Maya Putri
                                     </td>
 
-
                                     <td>
                                         Cardiology
                                     </td>
-
 
                                     <td>
 
@@ -679,10 +743,9 @@
 
                                     <td>
                                         <strong>
-                                            09:30
+                                            09:30 AM
                                         </strong>
                                     </td>
-
 
                                     <td>
 
@@ -708,16 +771,13 @@
 
                                     </td>
 
-
                                     <td>
                                         Dr. Budi Hartono
                                     </td>
 
-
                                     <td>
                                         Neurology
                                     </td>
-
 
                                     <td>
 
@@ -735,23 +795,22 @@
 
                                     <td>
                                         <strong>
-                                            10:15
+                                            10:15 AM
                                         </strong>
                                     </td>
-
 
                                     <td>
 
                                         <div class="patient-cell">
 
                                             <div class="table-avatar">
-                                                FN
+                                                FA
                                             </div>
 
                                             <div>
 
                                                 <strong>
-                                                    Fajar Nugraha
+                                                    Fajar Aditya
                                                 </strong>
 
                                                 <span>
@@ -764,16 +823,13 @@
 
                                     </td>
 
-
                                     <td>
                                         Dr. Dimas Santoso
                                     </td>
 
-
                                     <td>
                                         Internal Medicine
                                     </td>
-
 
                                     <td>
 
@@ -784,7 +840,6 @@
                                     </td>
 
                                 </tr>
-
 
                             </tbody>
 
@@ -817,23 +872,15 @@
 
                         </div>
 
-
-                        <a
-                            href="rooms.html"
-                            class="view-link"
-                        >
-                            View rooms →
-                        </a>
-
                     </div>
 
 
 
-                    <!-- OCCUPANCY -->
+                    <!-- OVERALL -->
 
-                    <div class="occupancy-summary">
+                    <div class="capacity-overview">
 
-                        <div class="occupancy-number">
+                        <div class="capacity-number">
 
                             <strong>
                                 78
@@ -846,7 +893,7 @@
                         </div>
 
 
-                        <strong class="occupancy-percent">
+                        <strong class="capacity-percent">
                             65%
                         </strong>
 
@@ -873,97 +920,109 @@
 
                             <div>
 
-                                <span class="capacity-name">
+                                <span>
                                     ICU
                                 </span>
 
-                                <span class="capacity-count">
+                                <small>
                                     8 / 10 beds
-                                </span>
+                                </small>
 
                             </div>
 
-                            <span class="capacity-percent">
+                            <strong>
                                 80%
-                            </span>
+                            </strong>
 
                         </div>
-
 
 
                         <div class="capacity-item">
 
                             <div>
 
-                                <span class="capacity-name">
+                                <span>
                                     Inpatient
                                 </span>
 
-                                <span class="capacity-count">
+                                <small>
                                     52 / 80 beds
-                                </span>
+                                </small>
 
                             </div>
 
-                            <span class="capacity-percent">
+                            <strong>
                                 65%
-                            </span>
+                            </strong>
 
                         </div>
-
 
 
                         <div class="capacity-item">
 
                             <div>
 
-                                <span class="capacity-name">
+                                <span>
                                     Emergency
                                 </span>
 
-                                <span class="capacity-count">
+                                <small>
                                     12 / 20 beds
-                                </span>
+                                </small>
 
                             </div>
 
-                            <span class="capacity-percent">
+                            <strong>
                                 60%
-                            </span>
+                            </strong>
 
                         </div>
-
 
 
                         <div class="capacity-item">
 
                             <div>
 
-                                <span class="capacity-name">
+                                <span>
                                     Isolation
                                 </span>
 
-                                <span class="capacity-count">
+                                <small>
                                     6 / 10 beds
-                                </span>
+                                </small>
 
                             </div>
 
-                            <span class="capacity-percent">
+                            <strong>
                                 60%
-                            </span>
+                            </strong>
 
                         </div>
 
                     </div>
 
+
+                    <a
+                        href="rooms.html"
+                        class="card-link"
+                    >
+                        Manage rooms & beds →
+                    </a>
+
                 </section>
 
+            </div>
 
 
-                <!-- =================================
-                     STAFF OVERVIEW
-                ================================== -->
+
+            <!-- =====================================
+                 BOTTOM GRID
+            ====================================== -->
+
+            <div class="bottom-grid">
+
+
+                <!-- STAFF OVERVIEW -->
 
                 <section class="dashboard-card staff-card">
 
@@ -977,7 +1036,7 @@
                             </h2>
 
                             <p>
-                                Current active staff
+                                Active hospital staff
                             </p>
 
                         </div>
@@ -996,21 +1055,13 @@
 
                     <div class="staff-total">
 
-                        <div class="staff-icon">
-                            ♙
-                        </div>
+                        <strong>
+                            128
+                        </strong>
 
-                        <div>
-
-                            <strong>
-                                128
-                            </strong>
-
-                            <span>
-                                Active Staff
-                            </span>
-
-                        </div>
+                        <span>
+                            Active Staff
+                        </span>
 
                     </div>
 
@@ -1019,11 +1070,17 @@
                     <div class="staff-breakdown">
 
 
-                        <div class="staff-row">
+                        <div class="staff-item">
+
+                            <div class="staff-icon doctor">
+                                ⚕
+                            </div>
 
                             <div>
 
-                                <span class="staff-dot doctor-dot"></span>
+                                <strong>
+                                    42
+                                </strong>
 
                                 <span>
                                     Doctors
@@ -1031,29 +1088,27 @@
 
                             </div>
 
-                            <strong>
-                                42
-                            </strong>
-
                         </div>
 
 
 
-                        <div class="staff-row">
+                        <div class="staff-item">
+
+                            <div class="staff-icon nurse">
+                                ✚
+                            </div>
 
                             <div>
 
-                                <span class="staff-dot nurse-dot"></span>
+                                <strong>
+                                    86
+                                </strong>
 
                                 <span>
                                     Nurses
                                 </span>
 
                             </div>
-
-                            <strong>
-                                86
-                            </strong>
 
                         </div>
 
@@ -1063,9 +1118,7 @@
 
 
 
-                <!-- =================================
-                     RECENT ACTIVITY
-                ================================== -->
+                <!-- RECENT ACTIVITY -->
 
                 <section class="dashboard-card activity-card">
 
@@ -1079,7 +1132,7 @@
                             </h2>
 
                             <p>
-                                Latest system activity
+                                Latest administrative activity
                             </p>
 
                         </div>
@@ -1112,7 +1165,7 @@
                                 </strong>
 
                                 <span>
-                                    Dr. Maya Putri was added to the system
+                                    Dr. Maya Putri was added to the system.
                                 </span>
 
                                 <small>
@@ -1138,7 +1191,7 @@
                                 </strong>
 
                                 <span>
-                                    Fajar Nugraha was registered
+                                    Fajar Aditya was registered as a new patient.
                                 </span>
 
                                 <small>
@@ -1164,37 +1217,11 @@
                                 </strong>
 
                                 <span>
-                                    APT-0018 was confirmed
+                                    Appointment APT-0018 was confirmed.
                                 </span>
 
                                 <small>
                                     32 minutes ago
-                                </small>
-
-                            </div>
-
-                        </div>
-
-
-
-                        <div class="activity-item">
-
-                            <div class="activity-icon">
-                                ⚙
-                            </div>
-
-                            <div class="activity-content">
-
-                                <strong>
-                                    User account updated
-                                </strong>
-
-                                <span>
-                                    Nurse account permissions were updated
-                                </span>
-
-                                <small>
-                                    48 minutes ago
                                 </small>
 
                             </div>
@@ -1223,76 +1250,12 @@
 
 function logout() {
 
-    window.location.href =
-        "../../index.html";
-
-}
-
-
-/* ========================================
-   CURRENT DATE
-======================================== */
-
-const currentDate =
-    document.getElementById(
-        "currentDate"
-    );
-
-
-if (currentDate) {
-
-    const today =
-        new Date();
-
-
-    currentDate.textContent =
-        today.toLocaleDateString(
-            "en-US",
-            {
-                month: "long",
-                day: "numeric",
-                year: "numeric"
-            }
-        );
-
-}
-
-
-/* ========================================
-   MOBILE SIDEBAR
-======================================== */
-
-const mobileMenuButton =
-    document.getElementById(
-        "mobileMenuButton"
-    );
-
-
-const sidebar =
-    document.querySelector(
-        ".sidebar"
-    );
-
-
-if (
-    mobileMenuButton &&
-    sidebar
-) {
-
-    mobileMenuButton.addEventListener(
-        "click",
-        function () {
-
-            sidebar.classList.toggle(
-                "open"
-            );
-
-        }
-    );
+    window.location.href = "../index.html";
 
 }
 
 </script>
+
 
 </body>
 

@@ -1,398 +1,415 @@
 /* =========================================
-   RESET
+RESET
 ========================================= */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-}
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
 body {
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        sans-serif;
+font-family:
+Inter,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+sans-serif;
 
-    background: #f5f7fa;
-    color: #172033;
+background: #f5f7fa;
+color: #172033;
+
 }
 
-
 /* =========================================
-   APP LAYOUT
+APP LAYOUT
 ========================================= */
 
 .app-layout {
-    display: flex;
-    min-height: 100vh;
+display: flex;
+min-height: 100vh;
 }
 
-
 /* =========================================
-   SIDEBAR
+SIDEBAR
+Same structure as Dashboard
+Patient page keeps its own TEAL color
 ========================================= */
 
 .sidebar {
-    width: 250px;
-    min-width: 250px;
+width: 250px;
+min-width: 250px;
 
-    background: #ffffff;
+background: #ffffff;
 
-    border-right: 1px solid #e7eaf0;
+border-right: 1px solid #e7eaf0;
 
-    display: flex;
-    flex-direction: column;
+display: flex;
+flex-direction: column;
 
-    position: fixed;
+position: fixed;
 
-    top: 0;
-    left: 0;
-    bottom: 0;
+top: 0;
+left: 0;
+bottom: 0;
 
-    z-index: 100;
+z-index: 100;
+
 }
 
-
 /* =========================================
-   BRAND
+BRAND
 ========================================= */
 
 .sidebar-brand {
-    height: 82px;
+height: 82px;
 
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 
-    gap: 12px;
+gap: 12px;
 
-    padding: 0 24px;
+padding: 0 24px;
 
-    border-bottom: 1px solid #eef0f4;
+border-bottom: 1px solid #eef0f4;
+
 }
-
 
 .sidebar-logo {
-    width: 38px;
-    height: 38px;
+width: 38px;
+height: 38px;
 
-    border-radius: 10px;
+border-radius: 10px;
 
-    background: #e9f7f4;
+background: #e9f7f4;
 
-    color: #159c8c;
+color: #159c8c;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+display: flex;
+align-items: center;
+justify-content: center;
 
-    font-size: 24px;
-    font-weight: 700;
+font-size: 24px;
+font-weight: 700;
+
 }
-
 
 .brand-text {
-    display: flex;
-    flex-direction: column;
+display: flex;
+flex-direction: column;
 
-    line-height: 1;
+line-height: 1;
+
 }
-
 
 .brand-text strong {
-    font-size: 15px;
-    letter-spacing: 0.5px;
+font-size: 15px;
+letter-spacing: 0.5px;
 }
-
 
 .brand-text span {
-    font-size: 10px;
-    
-    color: #159c8c;
+font-size: 10px;
 
-    letter-spacing: 2px;
+color: #159c8c;
+
+letter-spacing: 2px;
+
 
 }
 
-
 /* =========================================
-   NAVIGATION
+NAVIGATION
+Same spacing as Dashboard
 ========================================= */
 
 .sidebar-nav {
-    padding: 24px 14px;
+padding: 24px 14px;
 
-    overflow-y: auto;
+overflow-y: auto;
 
-    flex: 1;
+flex: 1;
+
 }
-
 
 .nav-label {
-    font-size: 10px;
-    font-weight: 700;
+font-size: 10px;
 
-    letter-spacing: 1.3px;
+font-weight: 700;
 
-    color: #a1a9b5;
+letter-spacing: 1.3px;
 
-    padding: 0 12px;
+color: #9aa3b2;
 
-    margin-bottom: 8px;
+padding: 0 12px;
+
+margin-bottom: 8px;
+
 }
 
+.nav-label.secondary {
+margin-top: 26px;
+}
 
 .nav-label:not(:first-child) {
-    margin-top: 26px;
+margin-top: 26px;
 }
-
 
 .nav-item {
-    height: 44px;
+height: 44px;
 
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 
-    gap: 12px;
+gap: 12px;
 
-    padding: 0 12px;
+padding: 0 12px;
 
-    margin-bottom: 4px;
+margin-bottom: 4px;
 
-    border-radius: 8px;
+border-radius: 8px;
 
-    color: #687383;
+color: #596579;
 
-    text-decoration: none;
+text-decoration: none;
 
-    font-size: 14px;
-    font-weight: 500;
+font-size: 14px;
 
-    transition:
-        background 0.2s ease,
-        color 0.2s ease;
+font-weight: 500;
+
+transition:
+    background 0.2s ease,
+    color 0.2s ease;
+
 }
-
 
 .nav-item:hover {
-    background: #f3f7f7;
-    color: #159c8c;
-}
+background: #f3f7f7;
 
+color: #159c8c;
+
+}
 
 .nav-item.active {
-    background: #eaf7f5;
-    color: #159c8c;
+background: #eaf7f5;
 
-    font-weight: 600;
+color: #159c8c;
+
+font-weight: 600;
+
 }
-
 
 .nav-icon {
-    width: 22px;
+width: 22px;
 
-    display: inline-flex;
+display: inline-flex;
 
-    justify-content: center;
+justify-content: center;
 
-    align-items: center;
+align-items: center;
 
-    font-size: 17px;
+font-size: 17px;
 
-    flex-shrink: 0;
+flex-shrink: 0;
+
 }
 
-
 /* =========================================
-   SIDEBAR BOTTOM
+SIDEBAR BOTTOM
+Same as Dashboard
 ========================================= */
 
 .sidebar-bottom {
-    padding: 16px;
+padding: 16px;
 
-    border-top: 1px solid #edf0f4;
+border-top: 1px solid #eef0f4;
+
 }
-
 
 .logout-button {
-    width: 100%;
+width: 100%;
 
-    height: 44px;
+height: 44px;
 
-    border: none;
+border: none;
 
-    background: transparent;
+background: transparent;
 
-    border-radius: 8px;
+border-radius: 8px;
 
-    display: flex;
-    align-items: center;
+display: flex;
+align-items: center;
 
-    gap: 12px;
+gap: 12px;
 
-    padding: 0 12px;
+padding: 0 12px;
 
-    color: #737d8b;
+color: #667085;
 
-    font-size: 14px;
+font-size: 14px;
 
-    cursor: pointer;
+cursor: pointer;
 
-    text-align: left;
+text-align: left;
 
 }
-
 
 .logout-button:hover {
-    background: #f5f7f9;
-    color: #d14c4c;
+background: #f5f7f9;
+
+color: #d14c4c;
+
 }
 
-
 /* =========================================
-   MAIN
+MAIN CONTENT
 ========================================= */
 
 .main-content {
-    margin-left: 250px;
+margin-left: 250px;
 
-    width: calc(100% - 250px);
+width: calc(100% - 250px);
 
-    min-height: 100vh;
+min-height: 100vh;
+
 }
 
-
 /* =========================================
-   TOPBAR
+TOPBAR
 ========================================= */
 
 .topbar {
-    height: 82px;
+height: 82px;
 
-    background: #ffffff;
+background: #ffffff;
 
-    border-bottom: 1px solid #e7ebf0;
+border-bottom: 1px solid #e7eaf0;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+display: flex;
 
-    padding: 0 34px;
+align-items: center;
+
+justify-content: flex-end;
+
+padding: 0 34px;
+
 }
-
 
 .topbar-right {
-    display: flex;
-    align-items: center;
+display: flex;
 
-    gap: 22px;
+align-items: center;
+
+gap: 22px;
+
 }
-
 
 .mobile-menu {
-    display: none;
+display: none;
 }
 
+/* =========================================
+NOTIFICATION
+========================================= */
 
 .notification-button {
-    width: 40px;
-    height: 40px;
+width: 40px;
+height: 40px;
 
-    border: none;
+border: none;
 
-    background: transparent;
+background: transparent;
 
-    border-radius: 8px;
+border-radius: 8px;
 
-    font-size: 20px;
+font-size: 20px;
 
-    color: #667180;
+color: #667085;
 
-    cursor: pointer;
+position: relative;
 
-    position: relative;
+cursor: pointer;
+
 }
-
 
 .notification-button:hover {
-    background: #f4f6f8;
+background: #f5f7fa;
 }
-
 
 .notification-dot {
-    position: absolute;
+position: absolute;
 
-    width: 7px;
-    height: 7px;
+top: 7px;
+right: 7px;
 
-    border-radius: 50%;
+width: 7px;
+height: 7px;
 
-    background: #159c8c;
+border-radius: 50%;
 
-    top: 7px;
-    right: 7px;
+background: #159c8c;
 
-    border: 2px solid #ffffff;
+border: 2px solid #ffffff;
+
 }
 
+/* =========================================
+PROFILE
+========================================= */
 
 .profile {
-    display: flex;
-    align-items: center;
+display: flex;
 
-    gap: 10px;
+align-items: center;
+
+gap: 10px;
+
 }
-
 
 .profile-avatar {
-    width: 40px;
-    height: 40px;
+width: 40px;
+height: 40px;
 
-    border-radius: 50%;
+border-radius: 50%;
 
-    background: #e5f4f2;
+background: #e5f4f2;
 
-    color: #159c8c;
+color: #159c8c;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+display: flex;
 
-    font-weight: 700;
+align-items: center;
+justify-content: center;
+
+font-weight: 700;
+
 }
-
 
 .profile-info {
-    display: flex;
-    flex-direction: column;
+display: flex;
 
-    gap: 2px;
+flex-direction: column;
+
+gap: 2px;
+
 }
-
 
 .profile-info strong {
-    font-size: 13px;
+font-size: 13px;
 }
-
 
 .profile-info span {
-    font-size: 11px;
+font-size: 11px;
 
-    color: #8a94a2;
+color: #8b95a7;
 
 }
-
 
 .profile-arrow {
-    color: #929aa6;
+color: #8b95a7;
 
-    margin-left: 4px;
+margin-left: 4px;
+
 }
-
 
 /* =========================================
    PAGE CONTENT

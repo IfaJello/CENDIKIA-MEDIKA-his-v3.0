@@ -1,0 +1,2146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Staff | Cendekia Medika</title>
+
+    <link
+        rel="stylesheet"
+        href="../../css/staff.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app-layout">
+
+
+    <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="sidebar-brand">
+
+            <div class="sidebar-logo">
+                +
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    CENDEKIA
+                </strong>
+
+                <span>
+                    MEDIKA
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-nav">
+
+
+            <p class="nav-label">
+                MAIN MENU
+            </p>
+
+
+            <a
+                href="dashboard.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▦
+                </span>
+
+                <span>
+                    Dashboard
+                </span>
+
+            </a>
+
+
+            <a
+                href="patients.html"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    Patients
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ◷
+                </span>
+
+                <span>
+                    Appointments
+                </span>
+
+            </a>
+
+
+
+            <p class="nav-label">
+                HOSPITAL
+            </p>
+
+
+            <a
+                href="staff.html"
+                class="nav-item active"
+            >
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    Staff
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Departments
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Rooms & Beds
+                </span>
+
+            </a>
+
+
+
+            <p class="nav-label">
+                ADMINISTRATION
+            </p>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ♙
+                </span>
+
+                <span>
+                    User Management
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ▤
+                </span>
+
+                <span>
+                    Reports
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ◉
+                </span>
+
+                <span>
+                    Audit Logs
+                </span>
+
+            </a>
+
+
+            <a
+                href="#"
+                class="nav-item"
+            >
+
+                <span class="nav-icon">
+                    ⚙
+                </span>
+
+                <span>
+                    Settings
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <button
+                class="logout-button"
+                type="button"
+                onclick="logout()"
+            >
+
+                <span>
+                    ↪
+                </span>
+
+                <span>
+                    Sign out
+                </span>
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================
+         MAIN CONTENT
+    ====================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <div class="mobile-menu">
+                ☰
+            </div>
+
+
+            <div class="topbar-right">
+
+
+                <button
+                    class="notification-button"
+                    type="button"
+                >
+
+                    ♧
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+
+                <div class="profile">
+
+
+                    <div class="profile-avatar">
+                        A
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <strong>
+                            Admin
+                        </strong>
+
+                        <span>
+                            Administrator
+                        </span>
+
+                    </div>
+
+
+                    <span class="profile-arrow">
+                        ▾
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =====================================
+             PAGE CONTENT
+        ====================================== -->
+
+        <section class="page-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-heading">
+
+
+                <div>
+
+                    <p class="eyebrow">
+                        HOSPITAL MANAGEMENT
+                    </p>
+
+                    <h1>
+                        Staff
+                    </h1>
+
+                    <p>
+                        Manage doctors, nurses, and other
+                        hospital staff across Cendekia Medika.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="primary-button"
+                    type="button"
+                    id="addStaffButton"
+                >
+
+                    <span>
+                        +
+                    </span>
+
+                    Add Staff
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 STATISTICS
+            ====================================== -->
+
+            <div class="stats-grid">
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Total Staff
+                    </span>
+
+                    <strong id="totalStaff">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Doctors
+                    </span>
+
+                    <strong id="doctorStaff">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Nurses
+                    </span>
+
+                    <strong id="nurseStaff">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <span>
+                        Active
+                    </span>
+
+                    <strong id="activeStaff">
+                        0
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 STAFF CARD
+            ====================================== -->
+
+            <section class="staff-card">
+
+
+                <!-- TOOLBAR -->
+
+                <div class="staff-toolbar">
+
+
+                    <div>
+
+                        <h2>
+                            All Staff
+                        </h2>
+
+                        <p>
+                            View and manage registered hospital staff.
+                        </p>
+
+                    </div>
+
+
+                    <div class="toolbar-actions">
+
+
+                        <!-- SEARCH -->
+
+                        <div class="search-box">
+
+                            <span>
+                                ⌕
+                            </span>
+
+                            <input
+                                type="text"
+                                id="searchInput"
+                                placeholder="Search staff..."
+                            >
+
+                        </div>
+
+
+
+                        <!-- ROLE FILTER -->
+
+                        <select
+                            id="roleFilter"
+                        >
+
+                            <option value="all">
+                                All roles
+                            </option>
+
+                            <option value="doctor">
+                                Doctor
+                            </option>
+
+                            <option value="nurse">
+                                Nurse
+                            </option>
+
+                            <option value="staff">
+                                Other Staff
+                            </option>
+
+                        </select>
+
+
+
+                        <!-- STATUS FILTER -->
+
+                        <select
+                            id="statusFilter"
+                        >
+
+                            <option value="all">
+                                All status
+                            </option>
+
+                            <option value="active">
+                                Active
+                            </option>
+
+                            <option value="inactive">
+                                Inactive
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TABLE -->
+
+                <div class="table-container">
+
+
+                    <table>
+
+
+                        <thead>
+
+                            <tr>
+
+                                <th>
+                                    STAFF
+                                </th>
+
+                                <th>
+                                    STAFF ID
+                                </th>
+
+                                <th>
+                                    ROLE
+                                </th>
+
+                                <th>
+                                    DEPARTMENT
+                                </th>
+
+                                <th>
+                                    CONTACT
+                                </th>
+
+                                <th>
+                                    STATUS
+                                </th>
+
+                                <th>
+                                    ACTION
+                                </th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody
+                            id="staffTableBody"
+                        >
+                        </tbody>
+
+
+                    </table>
+
+
+                </div>
+
+
+
+                <!-- EMPTY STATE -->
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                >
+
+                    <div class="empty-icon">
+                        ♙
+                    </div>
+
+                    <h3>
+                        No staff found
+                    </h3>
+
+                    <p>
+                        Try changing your search or filters.
+                    </p>
+
+                </div>
+
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =====================================
+     ADD / EDIT STAFF MODAL
+====================================== -->
+
+<div
+    class="modal-overlay"
+    id="staffModal"
+>
+
+
+    <div class="modal">
+
+
+        <!-- MODAL HEADER -->
+
+        <div class="modal-header">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    STAFF MANAGEMENT
+                </p>
+
+                <h2 id="modalTitle">
+                    Add New Staff
+                </h2>
+
+                <p id="modalDescription">
+                    Create a new hospital staff record.
+                </p>
+
+            </div>
+
+
+            <button
+                class="modal-close"
+                type="button"
+                id="closeModal"
+            >
+                ×
+            </button>
+
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <form id="staffForm">
+
+
+            <div class="form-grid">
+
+
+                <!-- NAME -->
+
+                <div class="form-group full">
+
+                    <label for="staffName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="staffName"
+                        placeholder="Enter full name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- ROLE -->
+
+                <div class="form-group">
+
+                    <label for="staffRole">
+                        Role
+                    </label>
+
+                    <select
+                        id="staffRole"
+                        required
+                    >
+
+                        <option value="">
+                            Select role
+                        </option>
+
+                        <option value="doctor">
+                            Doctor
+                        </option>
+
+                        <option value="nurse">
+                            Nurse
+                        </option>
+
+                        <option value="staff">
+                            Other Staff
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- GENDER -->
+
+                <div class="form-group">
+
+                    <label for="staffGender">
+                        Gender
+                    </label>
+
+                    <select
+                        id="staffGender"
+                        required
+                    >
+
+                        <option value="">
+                            Select gender
+                        </option>
+
+                        <option value="Female">
+                            Female
+                        </option>
+
+                        <option value="Male">
+                            Male
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- DEPARTMENT -->
+
+                <div class="form-group">
+
+                    <label for="staffDepartment">
+                        Department
+                    </label>
+
+                    <select
+                        id="staffDepartment"
+                        required
+                    >
+
+                        <option value="">
+                            Select department
+                        </option>
+
+                        <option value="Internal Medicine">
+                            Internal Medicine
+                        </option>
+
+                        <option value="Cardiology">
+                            Cardiology
+                        </option>
+
+                        <option value="Neurology">
+                            Neurology
+                        </option>
+
+                        <option value="Emergency">
+                            Emergency
+                        </option>
+
+                        <option value="Pediatrics">
+                            Pediatrics
+                        </option>
+
+                        <option value="Administration">
+                            Administration
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="form-group">
+
+                    <label for="staffPhone">
+                        Phone Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="staffPhone"
+                        placeholder="+62 xxx xxxx xxxx"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="form-group">
+
+                    <label for="staffEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="staffEmail"
+                        placeholder="staff@cendekiamedika.com"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- STATUS -->
+
+                <div class="form-group">
+
+                    <label for="staffStatus">
+                        Status
+                    </label>
+
+                    <select
+                        id="staffStatus"
+                        required
+                    >
+
+                        <option value="active">
+                            Active
+                        </option>
+
+                        <option value="inactive">
+                            Inactive
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="modal-actions">
+
+
+                <button
+                    type="button"
+                    class="cancel-button"
+                    id="cancelModal"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="primary-button"
+                    id="submitStaff"
+                >
+                    Create Staff
+                </button>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================
+     JAVASCRIPT
+====================================== -->
+
+<script>
+
+
+/* ========================================
+   STAFF DATA
+======================================== */
+
+const staff = [
+
+    {
+        id: "DOC-0024",
+        name: "Dr. Dimas Santoso",
+        role: "doctor",
+        gender: "Male",
+        department: "Internal Medicine",
+        phone: "+62 812 3456 7890",
+        email: "dimas@cendekiamedika.com",
+        status: "active"
+    },
+
+    {
+        id: "DOC-0025",
+        name: "Dr. Maya Putri",
+        role: "doctor",
+        gender: "Female",
+        department: "Cardiology",
+        phone: "+62 813 4567 8901",
+        email: "maya@cendekiamedika.com",
+        status: "active"
+    },
+
+    {
+        id: "DOC-0026",
+        name: "Dr. Budi Hartono",
+        role: "doctor",
+        gender: "Male",
+        department: "Neurology",
+        phone: "+62 814 5678 9012",
+        email: "budi@cendekiamedika.com",
+        status: "inactive"
+    },
+
+    {
+        id: "NUR-0041",
+        name: "Siti Amelia",
+        role: "nurse",
+        gender: "Female",
+        department: "Emergency",
+        phone: "+62 815 6789 0123",
+        email: "siti@cendekiamedika.com",
+        status: "active"
+    },
+
+    {
+        id: "NUR-0042",
+        name: "Rina Maharani",
+        role: "nurse",
+        gender: "Female",
+        department: "Pediatrics",
+        phone: "+62 816 7890 1234",
+        email: "rina@cendekiamedika.com",
+        status: "active"
+    },
+
+    {
+        id: "STF-0012",
+        name: "Ahmad Rahman",
+        role: "staff",
+        gender: "Male",
+        department: "Administration",
+        phone: "+62 817 8901 2345",
+        email: "ahmad@cendekiamedika.com",
+        status: "active"
+    }
+
+];
+
+
+
+/* ========================================
+   ELEMENTS
+======================================== */
+
+const staffTableBody =
+    document.getElementById(
+        "staffTableBody"
+    );
+
+const searchInput =
+    document.getElementById(
+        "searchInput"
+    );
+
+const roleFilter =
+    document.getElementById(
+        "roleFilter"
+    );
+
+const statusFilter =
+    document.getElementById(
+        "statusFilter"
+    );
+
+const emptyState =
+    document.getElementById(
+        "emptyState"
+    );
+
+const staffModal =
+    document.getElementById(
+        "staffModal"
+    );
+
+const staffForm =
+    document.getElementById(
+        "staffForm"
+    );
+
+
+
+/* ========================================
+   INITIALS
+======================================== */
+
+function getInitials(name) {
+
+    return name
+        .trim()
+        .split(/\s+/)
+        .map(
+            word =>
+                word
+                    .charAt(0)
+                    .toUpperCase()
+        )
+        .join("")
+        .substring(0, 2);
+
+}
+
+
+
+/* ========================================
+   CAPITALIZE
+======================================== */
+
+function capitalize(value) {
+
+    if (!value) {
+        return "";
+    }
+
+    return (
+        value.charAt(0).toUpperCase()
+        + value.slice(1)
+    );
+
+}
+
+
+
+/* ========================================
+   ROLE NAME
+======================================== */
+
+function getRoleName(role) {
+
+    if (role === "doctor") {
+        return "Doctor";
+    }
+
+    if (role === "nurse") {
+        return "Nurse";
+    }
+
+    return "Other Staff";
+
+}
+
+
+
+/* ========================================
+   UPDATE STATISTICS
+======================================== */
+
+function updateStatistics() {
+
+    const total =
+        staff.length;
+
+
+    const doctors =
+        staff.filter(
+            person =>
+                person.role === "doctor"
+        ).length;
+
+
+    const nurses =
+        staff.filter(
+            person =>
+                person.role === "nurse"
+        ).length;
+
+
+    const active =
+        staff.filter(
+            person =>
+                person.status === "active"
+        ).length;
+
+
+    document.getElementById(
+        "totalStaff"
+    ).textContent =
+        total;
+
+
+    document.getElementById(
+        "doctorStaff"
+    ).textContent =
+        doctors;
+
+
+    document.getElementById(
+        "nurseStaff"
+    ).textContent =
+        nurses;
+
+
+    document.getElementById(
+        "activeStaff"
+    ).textContent =
+        active;
+
+}
+
+
+
+/* ========================================
+   DISPLAY STAFF
+======================================== */
+
+function displayStaff() {
+
+
+    const search =
+        searchInput.value
+            .toLowerCase()
+            .trim();
+
+
+    const selectedRole =
+        roleFilter.value;
+
+
+    const selectedStatus =
+        statusFilter.value;
+
+
+    let filteredStaff =
+        staff.filter(
+            person => {
+
+
+                const searchableText =
+
+                    person.name
+                    + " "
+                    + person.id
+                    + " "
+                    + person.email
+                    + " "
+                    + person.phone
+                    + " "
+                    + person.department;
+
+
+                const matchesSearch =
+                    searchableText
+                        .toLowerCase()
+                        .includes(search);
+
+
+                const matchesRole =
+                    selectedRole === "all"
+                    ||
+                    person.role === selectedRole;
+
+
+                const matchesStatus =
+                    selectedStatus === "all"
+                    ||
+                    person.status === selectedStatus;
+
+
+                return (
+                    matchesSearch
+                    &&
+                    matchesRole
+                    &&
+                    matchesStatus
+                );
+
+            }
+        );
+
+
+
+    staffTableBody.innerHTML = "";
+
+
+
+    if (
+        filteredStaff.length === 0
+    ) {
+
+        emptyState.style.display =
+            "block";
+
+        return;
+
+    }
+
+
+    emptyState.style.display =
+        "none";
+
+
+
+    filteredStaff.forEach(
+        person => {
+
+
+            const row =
+                document.createElement(
+                    "tr"
+                );
+
+
+            row.innerHTML = `
+
+                <td>
+
+                    <div class="staff-cell">
+
+                        <div class="staff-avatar">
+                            ${getInitials(person.name)}
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                ${escapeHTML(person.name)}
+                            </strong>
+
+                            <span>
+                                ${escapeHTML(person.gender)}
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </td>
+
+
+                <td>
+
+                    <strong>
+                        ${escapeHTML(person.id)}
+                    </strong>
+
+                </td>
+
+
+                <td>
+
+                    <span class="role-badge ${person.role}">
+                        ${getRoleName(person.role)}
+                    </span>
+
+                </td>
+
+
+                <td>
+                    ${escapeHTML(person.department)}
+                </td>
+
+
+                <td>
+
+                    <div class="contact-cell">
+
+                        <strong>
+                            ${escapeHTML(person.phone)}
+                        </strong>
+
+                        <span>
+                            ${escapeHTML(person.email)}
+                        </span>
+
+                    </div>
+
+                </td>
+
+
+                <td>
+
+                    <span
+                        class="status ${person.status}"
+                    >
+                        ${capitalize(person.status)}
+                    </span>
+
+                </td>
+
+
+                <td>
+
+                    <button
+                        class="action-button"
+                        type="button"
+                        onclick="openActionMenu(event, '${escapeJS(person.id)}')"
+                    >
+                        •••
+                    </button>
+
+                </td>
+
+            `;
+
+
+            staffTableBody.appendChild(
+                row
+            );
+
+        }
+    );
+
+}
+
+
+
+/* ========================================
+   ACTION MENU
+======================================== */
+
+function openActionMenu(
+    event,
+    staffId
+) {
+
+    event.stopPropagation();
+
+
+    closeActionMenus();
+
+
+    const button =
+        event.currentTarget;
+
+
+    const row =
+        button.closest("tr");
+
+
+    const menu =
+        document.createElement(
+            "div"
+        );
+
+
+    menu.className =
+        "action-menu";
+
+
+    menu.innerHTML = `
+
+        <button
+            type="button"
+            onclick="viewStaff('${staffId}')"
+        >
+            View Profile
+        </button>
+
+        <button
+            type="button"
+            onclick="editStaff('${staffId}')"
+        >
+            Edit Staff
+        </button>
+
+        <button
+            type="button"
+            class="danger"
+            onclick="toggleStaffStatus('${staffId}')"
+        >
+            ${getToggleText(staffId)}
+        </button>
+
+    `;
+
+
+    row.style.position =
+        "relative";
+
+
+    row.appendChild(
+        menu
+    );
+
+}
+
+
+
+/* ========================================
+   TOGGLE TEXT
+======================================== */
+
+function getToggleText(staffId) {
+
+    const person =
+        staff.find(
+            item =>
+                item.id === staffId
+        );
+
+
+    if (!person) {
+        return "Deactivate";
+    }
+
+
+    return person.status === "active"
+        ? "Deactivate"
+        : "Activate";
+
+}
+
+
+
+/* ========================================
+   CLOSE ACTION MENUS
+======================================== */
+
+function closeActionMenus() {
+
+    document
+        .querySelectorAll(
+            ".action-menu"
+        )
+        .forEach(
+            menu =>
+                menu.remove()
+        );
+
+}
+
+
+document.addEventListener(
+    "click",
+    closeActionMenus
+);
+
+
+
+/* ========================================
+   VIEW STAFF
+======================================== */
+
+function viewStaff(staffId) {
+
+    const person =
+        staff.find(
+            item =>
+                item.id === staffId
+        );
+
+
+    if (!person) {
+        return;
+    }
+
+
+    closeActionMenus();
+
+
+    alert(
+
+        "STAFF PROFILE\n\n"
+
+        + "Name: "
+        + person.name
+
+        + "\n\nStaff ID: "
+        + person.id
+
+        + "\n\nRole: "
+        + getRoleName(person.role)
+
+        + "\n\nGender: "
+        + person.gender
+
+        + "\n\nDepartment: "
+        + person.department
+
+        + "\n\nPhone: "
+        + person.phone
+
+        + "\n\nEmail: "
+        + person.email
+
+        + "\n\nStatus: "
+        + capitalize(person.status)
+
+    );
+
+}
+
+
+
+/* ========================================
+   ADD STAFF
+======================================== */
+
+document
+    .getElementById(
+        "addStaffButton"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+
+            staffForm.reset();
+
+
+            staffForm.dataset.editing =
+                "false";
+
+
+            staffForm.dataset.staffId =
+                "";
+
+
+            document.getElementById(
+                "modalTitle"
+            ).textContent =
+                "Add New Staff";
+
+
+            document.getElementById(
+                "modalDescription"
+            ).textContent =
+                "Create a new hospital staff record.";
+
+
+            document.getElementById(
+                "submitStaff"
+            ).textContent =
+                "Create Staff";
+
+
+            staffModal.classList.add(
+                "show"
+            );
+
+        }
+    );
+
+
+
+/* ========================================
+   EDIT STAFF
+======================================== */
+
+function editStaff(staffId) {
+
+    const person =
+        staff.find(
+            item =>
+                item.id === staffId
+        );
+
+
+    if (!person) {
+        return;
+    }
+
+
+    closeActionMenus();
+
+
+    document.getElementById(
+        "staffName"
+    ).value =
+        person.name;
+
+
+    document.getElementById(
+        "staffRole"
+    ).value =
+        person.role;
+
+
+    document.getElementById(
+        "staffGender"
+    ).value =
+        person.gender;
+
+
+    document.getElementById(
+        "staffDepartment"
+    ).value =
+        person.department;
+
+
+    document.getElementById(
+        "staffPhone"
+    ).value =
+        person.phone;
+
+
+    document.getElementById(
+        "staffEmail"
+    ).value =
+        person.email;
+
+
+    document.getElementById(
+        "staffStatus"
+    ).value =
+        person.status;
+
+
+    staffForm.dataset.editing =
+        "true";
+
+
+    staffForm.dataset.staffId =
+        staffId;
+
+
+    document.getElementById(
+        "modalTitle"
+    ).textContent =
+        "Edit Staff";
+
+
+    document.getElementById(
+        "modalDescription"
+    ).textContent =
+        "Update this staff member's information.";
+
+
+    document.getElementById(
+        "submitStaff"
+    ).textContent =
+        "Save Changes";
+
+
+    staffModal.classList.add(
+        "show"
+    );
+
+}
+
+
+
+/* ========================================
+   TOGGLE STAFF STATUS
+======================================== */
+
+function toggleStaffStatus(
+    staffId
+) {
+
+    const person =
+        staff.find(
+            item =>
+                item.id === staffId
+        );
+
+
+    if (!person) {
+        return;
+    }
+
+
+    closeActionMenus();
+
+
+    const action =
+        person.status === "active"
+            ? "deactivate"
+            : "activate";
+
+
+    const confirmed =
+        confirm(
+            "Are you sure you want to "
+            + action
+            + " "
+            + person.name
+            + "?"
+        );
+
+
+    if (!confirmed) {
+        return;
+    }
+
+
+    person.status =
+        person.status === "active"
+            ? "inactive"
+            : "active";
+
+
+    updateStatistics();
+
+    displayStaff();
+
+
+    alert(
+        person.name
+        + " is now "
+        + person.status
+        + "."
+    );
+
+}
+
+
+
+/* ========================================
+   FORM SUBMIT
+======================================== */
+
+staffForm.addEventListener(
+    "submit",
+    function(event) {
+
+        event.preventDefault();
+
+
+        const name =
+            document.getElementById(
+                "staffName"
+            ).value.trim();
+
+
+        const role =
+            document.getElementById(
+                "staffRole"
+            ).value;
+
+
+        const gender =
+            document.getElementById(
+                "staffGender"
+            ).value;
+
+
+        const department =
+            document.getElementById(
+                "staffDepartment"
+            ).value;
+
+
+        const phone =
+            document.getElementById(
+                "staffPhone"
+            ).value.trim();
+
+
+        const email =
+            document.getElementById(
+                "staffEmail"
+            ).value.trim();
+
+
+        const status =
+            document.getElementById(
+                "staffStatus"
+            ).value;
+
+
+        const editing =
+            staffForm.dataset.editing ===
+            "true";
+
+
+
+        /* EDIT */
+
+        if (editing) {
+
+
+            const staffId =
+                staffForm.dataset.staffId;
+
+
+            const person =
+                staff.find(
+                    item =>
+                        item.id === staffId
+                );
+
+
+            if (!person) {
+                return;
+            }
+
+
+            person.name =
+                name;
+
+            person.role =
+                role;
+
+            person.gender =
+                gender;
+
+            person.department =
+                department;
+
+            person.phone =
+                phone;
+
+            person.email =
+                email;
+
+            person.status =
+                status;
+
+
+            updateStatistics();
+
+            displayStaff();
+
+            closeModal();
+
+
+            alert(
+                name
+                + " has been updated successfully!"
+            );
+
+
+            return;
+
+        }
+
+
+
+        /* CREATE */
+
+        let prefix =
+            "STF";
+
+
+        if (role === "doctor") {
+            prefix = "DOC";
+        }
+
+        if (role === "nurse") {
+            prefix = "NUR";
+        }
+
+
+        const newNumber =
+            staff.length + 1;
+
+
+        const newId =
+            prefix
+            + "-"
+            + String(
+                1000 + newNumber
+            ).padStart(
+                4,
+                "0"
+            );
+
+
+        const newStaff = {
+
+            id:
+                newId,
+
+            name:
+                name,
+
+            role:
+                role,
+
+            gender:
+                gender,
+
+            department:
+                department,
+
+            phone:
+                phone,
+
+            email:
+                email,
+
+            status:
+                status
+
+        };
+
+
+        staff.unshift(
+            newStaff
+        );
+
+
+        updateStatistics();
+
+        displayStaff();
+
+        closeModal();
+
+
+        alert(
+            name
+            + " has been added successfully!"
+        );
+
+    }
+);
+
+
+
+/* ========================================
+   CLOSE MODAL
+======================================== */
+
+function closeModal() {
+
+    staffModal.classList.remove(
+        "show"
+    );
+
+    staffForm.reset();
+
+}
+
+
+document
+    .getElementById(
+        "closeModal"
+    )
+    .addEventListener(
+        "click",
+        closeModal
+    );
+
+
+document
+    .getElementById(
+        "cancelModal"
+    )
+    .addEventListener(
+        "click",
+        closeModal
+    );
+
+
+staffModal.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target ===
+            staffModal
+        ) {
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+
+/* ========================================
+   SEARCH
+======================================== */
+
+searchInput.addEventListener(
+    "input",
+    displayStaff
+);
+
+
+
+/* ========================================
+   ROLE FILTER
+======================================== */
+
+roleFilter.addEventListener(
+    "change",
+    displayStaff
+);
+
+
+
+/* ========================================
+   STATUS FILTER
+======================================== */
+
+statusFilter.addEventListener(
+    "change",
+    displayStaff
+);
+
+
+
+/* ========================================
+   LOGOUT
+======================================== */
+
+function logout() {
+
+    window.location.href =
+        "../index.html";
+
+}
+
+
+
+/* ========================================
+   ESCAPE HTML
+======================================== */
+
+function escapeHTML(value) {
+
+    return String(value)
+        .replace(
+            /&/g,
+            "&amp;"
+        )
+        .replace(
+            /</g,
+            "&lt;"
+        )
+        .replace(
+            />/g,
+            "&gt;"
+        )
+        .replace(
+            /"/g,
+            "&quot;"
+        )
+        .replace(
+            /'/g,
+            "&#039;"
+        );
+
+}
+
+
+
+/* ========================================
+   ESCAPE JAVASCRIPT
+======================================== */
+
+function escapeJS(value) {
+
+    return String(value)
+        .replace(
+            /\\/g,
+            "\\\\"
+        )
+        .replace(
+            /'/g,
+            "\\'"
+        );
+
+}
+
+
+
+/* ========================================
+   INITIALIZE
+======================================== */
+
+updateStatistics();
+
+displayStaff();
+
+
+</script>
+
+
+</body>
+
+</html>
